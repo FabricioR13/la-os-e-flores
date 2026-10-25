@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laços e Flores — Floricultura e Cestas</title>
+<meta name="description" content="Cestas personalizadas, flores e balões em Triunfo – RS. Escolha um presente pronto ou monte a sua cesta.">
+<meta name="theme-color" content="#7d7662">
+<link rel="icon" href="img/emblema.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Laços e Flores — cores do logo: verde-oliva do laço, rosa da flor e fundo rosado */
+:root{
+  --oliva:#7d7662; --oliva-escuro:#5c5747; --oliva-claro:#a7a18a;
+  --rosa:#e3a9b0; --rosa-escuro:#b9727d; --rosa-claro:#f8e3df;
+  --blush:#fff4ee; --creme:#fffaf7; --papel:#fdf8f5;
+  --texto:#3f3b31; --suave:#7a7366; --linha:#ecdfd8;
+  --ok:#5f8a5a; --alerta:#c46a3d; --erro:#b4474f;
+  --script:"Great Vibes","Brush Script MT",cursive;
+  --titulo:"Cormorant Garamond",Georgia,serif;
+  --corpo:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --raio:16px; --sombra:0 6px 24px rgba(92,87,71,.12);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--texto);font-family:var(--corpo);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p{margin:0}
+img{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* faixa e cabeçalho */
+.faixa{background:var(--oliva-escuro);color:#f4efe4;font-size:13px}
+.faixa .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;min-height:34px}
+.faixa a{color:#fff;font-weight:700;text-decoration:none;opacity:.9;white-space:nowrap}
+.faixa a:hover{opacity:1;text-decoration:underline}
+.topo{position:sticky;top:0;z-index:30;background:rgba(255,250,247,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;gap:12px;min-height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.marca img{width:44px;height:44px;border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 3px var(--rosa-claro)}
+.marca>span{min-width:0;overflow:hidden}
+.marca b{font-family:var(--script);font-weight:400;font-size:28px;color:var(--oliva-escuro);line-height:1;white-space:nowrap}
+.marca small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
+.topo nav{margin-left:auto;display:flex;gap:4px;align-items:center}
+.topo nav a.lnk{display:none;padding:8px 12px;border-radius:99px;text-decoration:none;font-weight:700;color:var(--oliva-escuro)}
+.topo nav a.lnk:hover{background:var(--rosa-claro)}
+@media(min-width:760px){.topo nav a.lnk{display:inline-block}}
+.btn-sacola{position:relative;display:flex;align-items:center;gap:8px;background:var(--oliva);color:#fff;padding:10px 14px;border-radius:99px;font-weight:800}
+.btn-sacola:hover{background:var(--oliva-escuro)}
+@media(max-width:430px){.btn-sacola .txt{display:none}.marca small{font-size:10px}}
+.btn-sacola .qt{min-width:22px;height:22px;padding:0 6px;border-radius:99px;background:var(--rosa);color:var(--oliva-escuro);font-size:13px;display:grid;place-items:center}
+
+/* hero */
+.hero{background:radial-gradient(120% 90% at 85% 0%,var(--rosa-claro) 0%,var(--blush) 45%,var(--creme) 100%);border-bottom:1px solid var(--linha);overflow:hidden}
+.hero .wrap{display:grid;gap:24px;padding-top:36px;padding-bottom:40px;align-items:center}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.2fr .8fr;padding-top:56px;padding-bottom:60px}}
+.hero h1{font-family:var(--script);font-weight:400;font-size:clamp(52px,12vw,88px);line-height:.95;color:var(--oliva-escuro)}
+.hero .sub{font-family:var(--titulo);font-size:clamp(20px,4.6vw,26px);font-weight:600;color:var(--rosa-escuro);margin-top:6px}
+.hero p.txt{margin-top:14px;max-width:520px;color:var(--suave);font-size:17px}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero .selo{justify-self:center;position:relative;width:min(300px,46vw);aspect-ratio:1;order:-1}
+@media(min-width:820px){.hero .selo{order:0}}
+.hero .selo img{width:100%;height:100%;border-radius:50%;box-shadow:0 18px 50px rgba(185,114,125,.25),0 0 0 10px rgba(255,255,255,.7)}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.hero .tags span{background:#fff;border:1px solid var(--linha);border-radius:99px;padding:6px 12px;font-size:14px;font-weight:700;color:var(--oliva-escuro)}
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:99px;font-weight:800;text-decoration:none;transition:transform .15s,background .15s}
+.bt:active{transform:scale(.97)}
+.bt-1{background:var(--oliva);color:#fff}.bt-1:hover{background:var(--oliva-escuro)}
+.bt-2{background:#fff;color:var(--oliva-escuro);border:2px solid var(--oliva)}.bt-2:hover{background:var(--blush)}
+.bt-rosa{background:var(--rosa-escuro);color:#fff}.bt-rosa:hover{background:#a3606b}
+.bt-zap{background:#25a35a;color:#fff}.bt-zap:hover{background:#1d8a4b}
+.bt[disabled]{opacity:.45;pointer-events:none}
+
+/* seções */
+section.bloco{padding:44px 0}
+.cab{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px;margin-bottom:18px}
+.cab h2{font-family:var(--titulo);font-size:clamp(30px,7vw,40px);font-weight:700;color:var(--oliva-escuro);line-height:1.05}
+.cab h2 em{font-family:var(--script);font-style:normal;font-weight:400;color:var(--rosa-escuro);font-size:1.15em}
+.cab p{color:var(--suave);max-width:560px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:0 -16px;padding-left:16px;padding-right:16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:9px 15px;border-radius:99px;background:#fff;border:1px solid var(--linha);font-weight:700;color:var(--oliva-escuro);white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--oliva);border-color:var(--oliva);color:#fff}
+
+/* produtos */
+.grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(min-width:700px){.grade{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+@media(min-width:1000px){.grade{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{background:#fff;border-radius:var(--raio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;border:1px solid #f3e9e4}
+.card .foto{position:relative;aspect-ratio:3/4;background:var(--blush)}
+.card .foto img{width:100%;height:100%;object-fit:cover}
+.card .foto .emo{width:100%;height:100%;display:grid;place-items:center;font-size:56px}
+.selo-dest{position:absolute;top:8px;left:8px;background:var(--rosa-escuro);color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:99px}
+.card .corpo{padding:12px 12px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:15.5px;font-weight:800;line-height:1.2}
+.card .desc{font-size:13.5px;color:var(--suave);line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .rodape{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:6px;padding-top:6px}
+.preco{font-weight:800;color:var(--oliva-escuro);font-size:17px;white-space:nowrap}
+.preco small{font-weight:600;font-size:11px;color:var(--suave);display:block;line-height:1}
+.add{width:40px;height:40px;border-radius:50%;background:var(--oliva);color:#fff;font-size:24px;line-height:1;display:grid;place-items:center;flex:none}
+.add:hover{background:var(--oliva-escuro)}
+.vazio{padding:28px;text-align:center;color:var(--suave);background:#fff;border-radius:var(--raio);border:1px dashed var(--linha)}
+
+/* monte sua cesta */
+.monte{background:linear-gradient(180deg,var(--blush),var(--creme));border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.monte-grid{display:grid;gap:18px}
+@media(min-width:960px){.monte-grid{grid-template-columns:1fr 340px;align-items:start}}
+.etapa{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);border:1px solid #f3e9e4;overflow:hidden}
+.etapa+.etapa{margin-top:14px}
+.etapa>header{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--linha);background:var(--creme)}
+.etapa>header .num{width:34px;height:34px;flex:none;border-radius:50%;background:var(--oliva);color:#fff;display:grid;place-items:center;font-weight:800}
+.etapa>header .num.ok{background:var(--rosa-escuro)}
+.etapa>header h3{font-family:var(--titulo);font-size:22px;font-weight:700;color:var(--oliva-escuro);line-height:1.1}
+.etapa>header p{font-size:13px;color:var(--suave)}
+.etapa>header .soma{margin-left:auto;font-weight:800;color:var(--oliva-escuro);white-space:nowrap;font-size:14px}
+.opcoes{display:grid;gap:0}
+@media(min-width:640px){.opcoes{grid-template-columns:1fr 1fr}}
+.op{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #f4ece8}
+@media(min-width:640px){.op:nth-child(odd){border-right:1px solid #f4ece8}}
+.op .ic{width:46px;height:46px;flex:none;border-radius:12px;background:var(--blush);display:grid;place-items:center;font-size:24px;overflow:hidden}
+.op .ic img{width:100%;height:100%;object-fit:cover}
+.op .info{min-width:0;flex:1}
+.op .info b{display:block;font-size:14.5px;line-height:1.2}
+.op .info span{display:block;font-size:12.5px;color:var(--suave);line-height:1.25}
+.op .info .pr{color:var(--oliva-escuro);font-weight:800;font-size:13.5px;margin-top:2px}
+.op.sel{background:#fbf3f0}
+.qtd{display:flex;align-items:center;gap:2px;flex:none;background:var(--blush);border-radius:99px;padding:3px}
+.qtd button{width:32px;height:32px;border-radius:50%;background:#fff;color:var(--oliva-escuro);font-weight:800;font-size:18px;line-height:1;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.qtd button:disabled{opacity:.35}
+.qtd output{min-width:24px;text-align:center;font-weight:800}
+.radio{width:28px;height:28px;flex:none;border-radius:50%;border:2px solid var(--oliva-claro);display:grid;place-items:center}
+.op.sel .radio{border-color:var(--rosa-escuro)}
+.op.sel .radio::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--rosa-escuro)}
+.op.base{cursor:pointer}
+.op.bloq{opacity:.5;cursor:not-allowed;background:#faf7f5}
+.op .cad{flex:none;font-size:18px;width:28px;text-align:center}
+.op .info .esp{display:inline-block;margin-top:2px;font-size:11.5px;color:var(--oliva);font-weight:700}
+.ideal{font-style:normal;font-size:11px;font-weight:800;background:var(--rosa-claro);color:var(--rosa-escuro);padding:2px 8px;border-radius:99px;margin-left:4px;vertical-align:1px}
+.trava{padding:18px 16px;font-size:14.5px;color:var(--suave);background:#fbf6f3;line-height:1.5}
+.trava a{color:var(--rosa-escuro);font-weight:800}
+.ocupa{padding:12px 16px 4px;font-size:14px;color:var(--suave)}
+.ocupa b{color:var(--oliva-escuro)}
+.medidor{height:9px;background:var(--blush);border-radius:99px;overflow:hidden;margin-top:8px}
+.medidor span{display:block;height:100%;background:linear-gradient(90deg,var(--oliva-claro),var(--oliva));border-radius:99px}
+.cesta-esc{display:flex;justify-content:space-between;gap:10px;font-weight:800;font-size:14px;margin-top:4px;padding-top:10px;border-top:1px dashed var(--linha)}
+.resumo{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);border:1px solid #f3e9e4;padding:18px}
+@media(min-width:960px){.resumo{position:sticky;top:84px}}
+.resumo h3{font-family:var(--titulo);font-size:26px;color:var(--oliva-escuro)}
+.resumo ul{list-style:none;margin:12px 0;padding:0;display:grid;gap:6px;font-size:14px}
+.resumo li{display:flex;justify-content:space-between;gap:10px}
+.resumo li span:last-child{white-space:nowrap;font-weight:700}
+.resumo .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--linha);padding-top:12px;margin-top:6px}
+.resumo .tot b{font-size:26px;color:var(--oliva-escuro)}
+.resumo .aviso{font-size:13px;color:var(--alerta);margin:8px 0}
+.resumo textarea{width:100%;margin-top:8px}
+.barra-monte{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--oliva-escuro);color:#fff;padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;box-shadow:0 -6px 20px rgba(0,0,0,.15);transform:translateY(110%);transition:transform .25s}
+.barra-monte.on{transform:none}
+.barra-monte .v{font-size:12px;opacity:.85;line-height:1.1}
+.barra-monte b{font-size:20px}
+.barra-monte .bt{margin-left:auto;padding:10px 16px}
+@media(min-width:960px){.barra-monte{display:none}}
+
+/* como funciona / rodapé */
+.passos{display:grid;gap:12px}
+@media(min-width:760px){.passos{grid-template-columns:repeat(4,1fr)}}
+.passo{background:#fff;border-radius:var(--raio);padding:18px;border:1px solid var(--linha)}
+.passo b{display:block;font-family:var(--titulo);font-size:21px;color:var(--oliva-escuro);margin:6px 0 4px}
+.passo p{font-size:14px;color:var(--suave)}
+.passo .n{font-family:var(--script);font-size:38px;color:var(--rosa-escuro);line-height:1}
+footer.rod{background:var(--oliva-escuro);color:#efe9dc;padding:36px 0 calc(90px + env(safe-area-inset-bottom))}
+footer.rod .wrap{display:grid;gap:22px}
+@media(min-width:760px){footer.rod .wrap{grid-template-columns:1.3fr 1fr 1fr}}
+footer.rod h4{font-family:var(--script);font-weight:400;font-size:36px;color:#fff}
+footer.rod p,footer.rod li{font-size:14px;opacity:.9}
+footer.rod ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px}
+footer.rod a{color:#fff}
+footer.rod .cred{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:14px;font-size:12.5px;opacity:.75}
+
+/* sacola (gaveta) */
+.fundo{position:fixed;inset:0;background:rgba(40,36,28,.45);z-index:50;opacity:0;pointer-events:none;transition:opacity .2s}
+.fundo.on{opacity:1;pointer-events:auto}
+.gaveta{position:fixed;top:0;right:0;bottom:0;width:min(480px,100%);background:var(--papel);z-index:51;transform:translateX(102%);transition:transform .25s;display:flex;flex-direction:column}
+.gaveta.on{transform:none}
+.gaveta>header{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--linha);background:#fff}
+.gaveta>header h2{font-family:var(--titulo);font-size:26px;color:var(--oliva-escuro)}
+.fechar{margin-left:auto;width:40px;height:40px;border-radius:50%;background:var(--blush);font-size:22px;color:var(--oliva-escuro)}
+.gaveta .rolar{flex:1;overflow-y:auto;padding:14px 16px 24px;-webkit-overflow-scrolling:touch}
+.item{display:flex;gap:12px;background:#fff;border-radius:14px;padding:10px;border:1px solid var(--linha)}
+.item+.item{margin-top:10px}
+.item .ft{width:62px;height:62px;flex:none;border-radius:10px;overflow:hidden;background:var(--blush);display:grid;place-items:center;font-size:28px}
+.item .ft img{width:100%;height:100%;object-fit:cover}
+.item .meio{flex:1;min-width:0}
+.item .meio b{display:block;font-size:14.5px;line-height:1.2}
+.item .meio .comp{font-size:12px;color:var(--suave);margin-top:2px}
+.item .linha{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px}
+.rem{font-size:12.5px;color:var(--erro);text-decoration:underline;padding:4px 0}
+fieldset{border:0;padding:0;margin:18px 0 0}
+legend{font-family:var(--titulo);font-weight:700;font-size:21px;color:var(--oliva-escuro);margin-bottom:8px;padding:0}
+.campo{display:grid;gap:4px;margin-top:10px}
+.campo label{font-size:13.5px;font-weight:700;color:var(--oliva-escuro)}
+input[type=text],input[type=tel],input[type=date],input[type=number],input[type=password],input[type=search],select,textarea{width:100%;padding:12px 13px;border-radius:12px;border:1.5px solid var(--linha);background:#fff;font-size:16px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--oliva-claro);box-shadow:0 0 0 3px rgba(167,161,138,.25)}
+textarea{min-height:76px;resize:vertical}
+.dois{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.modos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.modo{border:2px solid var(--linha);border-radius:14px;padding:12px;background:#fff;text-align:left}
+.modo b{display:block}
+.modo span{font-size:12.5px;color:var(--suave)}
+.modo[aria-pressed="true"]{border-color:var(--oliva);background:#f6f4ee}
+.contas{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:12px 14px;margin-top:18px;font-size:14.5px}
+.contas div{display:flex;justify-content:space-between;padding:3px 0}
+.contas .t{border-top:1px dashed var(--linha);margin-top:6px;padding-top:8px;font-size:18px;font-weight:800;color:var(--oliva-escuro)}
+.gaveta footer{padding:12px 16px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--linha);background:#fff}
+.gaveta footer .bt{width:100%}
+.erro-msg{color:var(--erro);font-size:13.5px;margin-top:8px}
+.nota{font-size:12.5px;color:var(--suave);margin-top:6px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:86px;transform:translate(-50%,20px);background:var(--oliva-escuro);color:#fff;padding:12px 18px;border-radius:99px;font-weight:700;font-size:14.5px;z-index:80;opacity:0;pointer-events:none;transition:all .25s;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- painel ---------- */
+.adm{min-height:100vh;background:#f6f3ee}
+.adm-topo{background:var(--oliva-escuro);color:#fff}
+.adm-topo .wrap{display:flex;align-items:center;gap:12px;min-height:58px}
+.adm-topo img{width:36px;height:36px;border-radius:50%}
+.adm-topo b{font-family:var(--script);font-weight:400;font-size:26px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.adm-topo a,.adm-topo button{margin-left:auto;color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.adm-topo button+a,.adm-topo a+button{margin-left:12px}
+.abas{background:#fff;border-bottom:1px solid var(--linha);position:sticky;top:0;z-index:10}
+.abas .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.abas .wrap::-webkit-scrollbar{display:none}
+.abas button{padding:14px 14px;font-weight:800;color:var(--suave);border-bottom:3px solid transparent;white-space:nowrap}
+.abas button[aria-selected="true"]{color:var(--oliva-escuro);border-color:var(--rosa-escuro)}
+.adm main{padding:20px 0 60px}
+.adm h2{font-family:var(--titulo);font-size:30px;color:var(--oliva-escuro);margin-bottom:12px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:800px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:#fff;border-radius:14px;padding:14px;border:1px solid var(--linha)}
+.kpi span{font-size:12.5px;color:var(--suave);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.kpi b{display:block;font-size:22px;color:var(--oliva-escuro);margin-top:4px}
+.painel{background:#fff;border-radius:14px;border:1px solid var(--linha);padding:14px;margin-top:14px}
+.painel h3{font-size:16px;font-weight:800;margin-bottom:8px;color:var(--oliva-escuro)}
+.lista{display:grid;gap:10px}
+.ped{background:#fff;border:1px solid var(--linha);border-radius:14px;padding:12px 14px}
+.ped .l1{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ped .cod{font-weight:800}
+.ped .l2{font-size:13.5px;color:var(--suave);margin-top:4px}
+.ped details{margin-top:8px;font-size:14px}
+.ped summary{cursor:pointer;font-weight:700;color:var(--oliva-escuro)}
+.ped .acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.ped .acoes select{width:auto;padding:8px 10px;font-size:14px}
+.bt-p{padding:8px 13px;font-size:14px}
+.st{font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;background:#eee}
+.st-novo{background:#fde6c9;color:#8a4a12}.st-confirmado{background:#e1ecf8;color:#2b5a8a}.st-producao{background:#efe3f6;color:#6a3a85}
+.st-saiu{background:#fff1b8;color:#7a6200}.st-entregue{background:#dcefd8;color:#2f6a2a}.st-cancelado{background:#f4d9db;color:#8a2b33}
+.pago{font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px;background:#dcefd8;color:#2f6a2a}
+.tabela{width:100%;border-collapse:collapse;font-size:14px}
+.tabela th,.tabela td{text-align:left;padding:9px 8px;border-bottom:1px solid #f0e8e3;vertical-align:middle}
+.tabela th{font-size:12px;color:var(--suave);text-transform:uppercase;letter-spacing:.04em}
+.tabela td.n{text-align:right;white-space:nowrap}
+.tabela img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+.rolagem{overflow-x:auto}
+.form-adm{display:grid;gap:10px}
+@media(min-width:700px){.form-adm.col2{grid-template-columns:1fr 1fr}}
+.linha-acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.mini{font-size:12.5px;color:var(--suave)}
+.tog{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700}
+.tog input{width:18px;height:18px;accent-color:var(--oliva)}
+.login{max-width:380px;margin:9vh auto 0;background:#fff;border-radius:20px;padding:28px 22px;box-shadow:var(--sombra);text-align:center}
+.login img{width:110px;margin:0 auto 6px;border-radius:50%}
+.login h1{font-family:var(--script);font-weight:400;font-size:44px;color:var(--oliva-escuro)}
+.login form{display:grid;gap:10px;margin-top:14px;text-align:left}
+.modal{position:fixed;inset:0;z-index:90;background:rgba(40,36,28,.5);display:grid;place-items:end center;padding:0}
+@media(min-width:700px){.modal{place-items:center;padding:20px}}
+.modal .caixa{background:#fff;width:min(620px,100%);max-height:92vh;overflow:auto;border-radius:20px 20px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
+@media(min-width:700px){.modal .caixa{border-radius:20px}}
+.modal h3{font-family:var(--titulo);font-size:26px;color:var(--oliva-escuro);margin-bottom:6px}
+.prev-img{width:100px;height:100px;border-radius:12px;object-fit:cover;background:var(--blush)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal div{min-height:54px;background:#faf7f4;border-radius:8px;padding:4px;font-size:11.5px}
+.cal div b{display:block;font-size:12px}
+.cal .tem{background:var(--rosa-claro)}
+.cal .hd{min-height:auto;background:none;text-align:center;font-weight:800;color:var(--suave)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   Laços e Flores — catálogo, Monte sua cesta, sacola e painel.
+   Demonstração: tudo fica salvo no navegador (localStorage).
+   Valores e fretes são fictícios: ajuste no painel (#admin).
+   ===================================================================== */
+const VERSAO_DADOS = 2;
+const CHAVE_DB = "lacoseflores_dados";
+const CHAVE_SACOLA = "lacoseflores_sacola";
+
+const DADOS_INICIAIS = {
+  versao: VERSAO_DADOS,
+  config: {
+    nome: "Laços e Flores",
+    subtitulo: "Floricultura e Cestas",
+    frase: "Colecione momentos surpreendendo quem lhe é especial.",
+    whatsapp: "51996466664",
+    instagram: "lacoseflores_",
+    cidade: "Triunfo – RS",
+    endereco: "",
+    horario: "Segunda a sábado, das 8h às 19h",
+    antecedencia: "Encomendas com pelo menos 1 dia de antecedência. Para o mesmo dia, consulte pelo WhatsApp.",
+    senha: "lacos2026",
+    retirada: true,
+    cartaoGratis: true
+  },
+  categorias: [
+    { id: "cestas", nome: "Cestas", emoji: "🧺" },
+    { id: "flores", nome: "Flores e plantas", emoji: "💐" },
+    { id: "baloes", nome: "Balões", emoji: "🎈" },
+    { id: "kids", nome: "Kids", emoji: "🍭" },
+    { id: "canecas", nome: "Canecas", emoji: "☕" }
+  ],
+  produtos: [
+    { id: "p1", cat: "cestas", nome: "Cesta Chocolate & Laço Dourado", desc: "Caixa rosa com Ferrero Rocher, bombons e chocolates, finalizada com celofane e laço dourado.", preco: 12990, img: "img/cesta-chocolate-laco-dourado.jpg", ativo: true, destaque: true },
+    { id: "p2", cat: "cestas", nome: "Cesta Com Carinho", desc: "Caixa vermelha “Com carinho” com chocolates, caneca, porta-retrato e laço vermelho.", preco: 14990, img: "img/cesta-com-carinho.jpg", ativo: true, destaque: true },
+    { id: "p3", cat: "cestas", nome: "Cesta Felicidades — Happy Hour", desc: "Caixote de madeira “Felicidades” com cervejas, petiscos, amendoim e laço xadrez.", preco: 15990, img: "img/cesta-felicidades.jpg", ativo: true, destaque: false },
+    { id: "p4", cat: "cestas", nome: "Box Chapeleira com Nomes", desc: "Chapeleira azul-marinho personalizada com os nomes do casal, recheada de chocolates.", preco: 11990, img: "img/chapeleira-nomes.jpg", ativo: true, destaque: true },
+    { id: "p5", cat: "cestas", nome: "Balde do Torcedor", desc: "Balde do time do coração com chocolates e guloseimas. Time à escolha.", preco: 10990, img: "img/balde-torcedor.jpg", ativo: true, destaque: false },
+    { id: "p6", cat: "cestas", nome: "Cesta Aniversário com Balão", desc: "Bandeja de guloseimas com balão personalizado com o nome e laço rosa.", preco: 13990, img: "img/cesta-aniversario-balao.jpg", ativo: true, destaque: false },
+    { id: "p7", cat: "cestas", nome: "Cesta de Vime com Balão Bubble", desc: "Cesta de vime com doces, salgadinhos e balão bubble personalizado.", preco: 16990, img: "img/cesta-vime-balao.jpg", ativo: true, destaque: false },
+    { id: "p8", cat: "cestas", nome: "Caixa Happy Hour", desc: "Caixa rosé com cerveja long neck, cookies, chocolates e cartão com mensagem.", preco: 9990, img: "img/caixa-happy-hour.jpg", ativo: true, destaque: false },
+    { id: "p9", cat: "cestas", nome: "Cesta Café da Manhã com Balão", desc: "Bandeja com guloseimas, foto, laços e balão bubble com o nome.", preco: 15990, img: "img/cesta-balao-laco-azul.jpg", ativo: true, destaque: false },
+    { id: "p10", cat: "cestas", nome: "Sacola Presente Aniversário", desc: "Sacola transparente com biscoitos, snacks e laço — um mimo leve e carinhoso.", preco: 6990, img: "img/sacola-aniversario.jpg", ativo: true, destaque: false },
+    { id: "p11", cat: "cestas", nome: "Caixa Feliz Aniversário", desc: "Caixa presente personalizada “Feliz Aniversário — Te amamos”, com fita de cetim.", preco: 8990, img: "img/caixa-feliz-aniversario.jpg", ativo: true, destaque: false },
+    { id: "p12", cat: "flores", nome: "Chapeleira com Orquídea", desc: "Chapeleira lilás com orquídea, suco de uva, chocolates e laço rosa.", preco: 18990, img: "img/chapeleira-orquidea.jpg", ativo: true, destaque: true },
+    { id: "p13", cat: "flores", nome: "Kalanchoe com Chocolates", desc: "Vaso de kalanchoe florido com Bauducco, Ouro Branco e chocolates, com laço.", preco: 7490, img: "img/kalanchoe-chocolates.jpg", ativo: true, destaque: false },
+    { id: "p14", cat: "flores", nome: "Mini Arranjo com Mensagem", desc: "Arranjo de flores em caixa personalizada com a sua mensagem.", preco: 9990, img: "img/box-flores-mensagem.jpg", ativo: true, destaque: false },
+    { id: "p15", cat: "flores", nome: "Antúrio na Cesta de Juta", desc: "Antúrio vermelho em cesta de juta, com laço de ráfia e espaço para mimos.", preco: 8990, img: "img/anturio-juta.jpg", ativo: true, destaque: false },
+    { id: "p16", cat: "flores", nome: "Kit Planta + Ferrero + Café", desc: "Bandeja de madeira com planta, Ferrero Rocher e café — presente para quem ama verde.", preco: 13990, img: "img/kit-planta-ferrero.jpg", ativo: true, destaque: false },
+    { id: "p17", cat: "flores", nome: "Orquídea", desc: "Orquídea em vaso, com embalagem para presente. Cores conforme disponibilidade.", preco: 8990, img: "img/orquidea.jpg", ativo: true, destaque: false },
+    { id: "p18", cat: "flores", nome: "Kalanchoe Embalado", desc: "Kalanchoe com papel estampado e laço dourado — lindo para os avós.", preco: 5990, img: "img/kalanchoe-avos.jpg", ativo: true, destaque: false },
+    { id: "p19", cat: "flores", nome: "Costela-de-Adão", desc: "Planta costela-de-adão em vaso decorado.", preco: 7990, img: "img/costela-de-adao.jpg", ativo: true, destaque: false },
+    { id: "p20", cat: "flores", nome: "Planta em Cachepô de Madeira", desc: "Plantinha em cachepô de ripas de madeira com tag de mensagem.", preco: 6490, img: "img/planta-vaso-madeira.jpg", ativo: true, destaque: false },
+    { id: "p21", cat: "baloes", nome: "Balão Bubble com Nome", desc: "Balão bubble transparente com confete dourado e nome personalizado.", preco: 5990, img: "img/balao-bubble-nome.jpg", ativo: true, destaque: true },
+    { id: "p22", cat: "baloes", nome: "Arranjo Bubble + Bexigas", desc: "Balão bubble personalizado com nome e idade sobre base de bexigas.", preco: 8990, img: "img/balao-bubble-arranjo.jpg", ativo: true, destaque: false },
+    { id: "p23", cat: "baloes", nome: "Balões Número Metalizados", desc: "Números dourados metalizados com base de bexigas e laço.", preco: 7990, img: "img/baloes-numero.jpg", ativo: true, destaque: false },
+    { id: "p24", cat: "baloes", nome: "Balão Vó / Vô Personalizado", desc: "Balão bubble com o nome dos avós, estrelas e laço dourado.", preco: 5490, img: "img/balao-vo-personalizado.jpg", ativo: true, destaque: false },
+    { id: "p25", cat: "kids", nome: "Cesta Kids Cata-vento Rosa", desc: "Potinho personalizado com o nome, cata-vento, balas, pirulitos e guloseimas.", preco: 7990, img: "img/cesta-kids-rosa.jpg", ativo: true, destaque: false },
+    { id: "p26", cat: "kids", nome: "Cesta Kids Cata-vento Azul", desc: "Potinho personalizado com o nome, cata-vento, balas, pirulitos e guloseimas.", preco: 7990, img: "img/cesta-kids-azul.jpg", ativo: true, destaque: false },
+    { id: "p27", cat: "canecas", nome: "Caneca Personalizada", desc: "Caneca com foto, nome ou frase. Pode vir com pelúcia e chocolates.", preco: 3990, img: "img/caneca-personalizada.jpg", ativo: true, destaque: false }
+  ],
+  monte: [
+    { id: "flores", titulo: "Flores", dica: "Some quantas quiser", emoji: "🌹", itens: [
+      { id: "f1", nome: "Rosa vermelha unitária", desc: "Com embalagem", preco: 1200, espaco: 1, emoji: "🌹", ativo: true },
+      { id: "f2", nome: "Mini buquê 3 rosas", desc: "Rosas nacionais", preco: 3500, espaco: 3, emoji: "💐", ativo: true },
+      { id: "f3", nome: "Girassol", desc: "Unidade", preco: 1500, espaco: 1, emoji: "🌻", ativo: true },
+      { id: "f4", nome: "Kalanchoe em vaso", desc: "Cores variadas", preco: 2500, espaco: 3, emoji: "🌺", ativo: true },
+      { id: "f5", nome: "Mini orquídea", desc: "Em vasinho", preco: 4500, espaco: 4, emoji: "🌸", ativo: true },
+      { id: "f6", nome: "Suculenta", desc: "Vasinho decorado", preco: 1500, espaco: 1, emoji: "🪴", ativo: true }
+    ]},
+    { id: "chocolates", titulo: "Chocolates", dica: "Some quantos quiser", emoji: "🍫", itens: [
+      { id: "c1", nome: "Ferrero Rocher (8 un.)", desc: "Caixa 100 g", preco: 3200, espaco: 2, emoji: "🍫", ativo: true },
+      { id: "c2", nome: "Caixa de bombons", desc: "250 g", preco: 1600, espaco: 3, emoji: "🍬", ativo: true },
+      { id: "c3", nome: "Barra de chocolate", desc: "90 g, sabores variados", preco: 900, espaco: 1, emoji: "🍫", ativo: true },
+      { id: "c4", nome: "Trufas artesanais (6 un.)", desc: "Sabores sortidos", preco: 2400, espaco: 2, emoji: "🟤", ativo: true },
+      { id: "c5", nome: "Ouro Branco / Sonho de Valsa", desc: "Pacote com 5", preco: 800, espaco: 1, emoji: "✨", ativo: true },
+      { id: "c6", nome: "Kit Kat", desc: "Unidade", preco: 600, espaco: 1, emoji: "🍫", ativo: true }
+    ]},
+    { id: "bebidas", titulo: "Bebidas", dica: "Some quantas quiser", emoji: "🍾", itens: [
+      { id: "d1", nome: "Espumante 750 ml", desc: "Brut ou moscatel", preco: 4500, espaco: 4, emoji: "🍾", ativo: true },
+      { id: "d2", nome: "Vinho tinto suave", desc: "750 ml", preco: 3800, espaco: 4, emoji: "🍷", ativo: true },
+      { id: "d3", nome: "Suco de uva integral", desc: "300 ml", preco: 1200, espaco: 2, emoji: "🍇", ativo: true },
+      { id: "d4", nome: "Cerveja long neck", desc: "Unidade", preco: 900, espaco: 2, emoji: "🍺", ativo: true },
+      { id: "d5", nome: "Cerveja artesanal", desc: "500 ml", preco: 2200, espaco: 3, emoji: "🍻", ativo: true },
+      { id: "d6", nome: "Achocolatado / suco infantil", desc: "Unidade", preco: 500, espaco: 1, emoji: "🧃", ativo: true }
+    ]},
+    { id: "baloes", titulo: "Balões", dica: "Vão presos à cesta — não ocupam espaço", emoji: "🎈", itens: [
+      { id: "l1", nome: "Balão bubble com nome", desc: "Personalizado", preco: 4500, espaco: 0, emoji: "🎈", ativo: true },
+      { id: "l2", nome: "Balão metalizado coração", desc: "45 cm", preco: 1500, espaco: 0, emoji: "❤️", ativo: true },
+      { id: "l3", nome: "Balão número metalizado", desc: "Unidade, 40 cm", preco: 2000, espaco: 0, emoji: "🔢", ativo: true },
+      { id: "l4", nome: "Buquê de 5 bexigas", desc: "Cores à escolha", preco: 2500, espaco: 0, emoji: "🎈", ativo: true }
+    ]},
+    { id: "extras", titulo: "Extras", dica: "Para deixar ainda mais especial", emoji: "🎁", itens: [
+      { id: "x1", nome: "Caneca personalizada", desc: "Com foto ou frase", preco: 3500, espaco: 2, emoji: "☕", ativo: true },
+      { id: "x2", nome: "Pelúcia pequena", desc: "Ursinho", preco: 3000, espaco: 3, emoji: "🧸", ativo: true },
+      { id: "x3", nome: "Porta-retrato com foto", desc: "10x15", preco: 2500, espaco: 2, emoji: "🖼️", ativo: true },
+      { id: "x4", nome: "Biscoitos e cookies", desc: "Pacote", preco: 1000, espaco: 2, emoji: "🍪", ativo: true },
+      { id: "x5", nome: "Salgadinhos e petiscos", desc: "Kit com 3", preco: 1500, espaco: 3, emoji: "🥨", ativo: true },
+      { id: "x6", nome: "Cartão personalizado", desc: "Com a sua mensagem", preco: 500, espaco: 0, emoji: "💌", ativo: true }
+    ]},
+    { id: "base", titulo: "Escolha a cesta", dica: "Liberada depois dos itens — só aparecem as que comportam tudo", emoji: "🧺", unica: true, itens: [
+      { id: "b1", nome: "Balde personalizado", desc: "Com nome ou time", preco: 3900, capacidade: 8, emoji: "🪣", ativo: true },
+      { id: "b2", nome: "Cesta de vime pequena", desc: "Ideal para mimos", preco: 3500, capacidade: 8, emoji: "🧺", ativo: true },
+      { id: "b3", nome: "Caixa MDF com tampa", desc: "Pode ser personalizada", preco: 4500, capacidade: 12, emoji: "📦", ativo: true },
+      { id: "b4", nome: "Box chapeleira", desc: "Cores variadas", preco: 5500, capacidade: 12, emoji: "🎩", ativo: true },
+      { id: "b5", nome: "Cesta de vime média", desc: "Cabe bastante coisa", preco: 4900, capacidade: 16, emoji: "🧺", ativo: true },
+      { id: "b6", nome: "Caixote de madeira", desc: "Estilo rústico", preco: 5200, capacidade: 22, emoji: "🪵", ativo: true },
+      { id: "b7", nome: "Cesta de vime grande", desc: "Para cestas bem recheadas", preco: 6500, capacidade: 30, emoji: "🧺", ativo: true }
+    ]}
+  ],
+  fretes: [
+    { id: "r1", nome: "Triunfo — Centro", valor: 800, ativo: true },
+    { id: "r2", nome: "Triunfo — demais bairros", valor: 1200, ativo: true },
+    { id: "r3", nome: "Polo Petroquímico", valor: 1800, ativo: true },
+    { id: "r4", nome: "Montenegro", valor: 2500, ativo: true },
+    { id: "r5", nome: "São Jerônimo / Charqueadas", valor: 3000, ativo: true },
+    { id: "r6", nome: "Nova Santa Rita", valor: 3000, ativo: true },
+    { id: "r7", nome: "Canoas / Esteio", valor: 4000, ativo: true },
+    { id: "r8", nome: "Porto Alegre", valor: 5000, ativo: true }
+  ],
+  pedidos: [],
+  financeiro: [],
+  seq: 100
+};
+
+const STATUS = {
+  novo: "Novo", confirmado: "Confirmado", producao: "Em produção",
+  saiu: "Saiu para entrega", entregue: "Entregue", cancelado: "Cancelado"
+};
+const PAGAMENTOS = { pix: "Pix", dinheiro: "Dinheiro", credito: "Cartão de crédito", debito: "Cartão de débito" };
+const PERIODOS = { manha: "Manhã (8h–12h)", tarde: "Tarde (13h–18h)", combinar: "Combinar pelo WhatsApp" };
+
+/* ---------- utilidades ---------- */
+const $ = (s, el = document) => el.querySelector(s);
+/* fotos: no arquivo de demonstração as imagens vêm embutidas aqui */
+const IMAGENS = {};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const res = s => esc(IMAGENS[s] || s);
+const brl = c => (c / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+const centavos = v => { const n = Number(String(v).replace(/[^\d,.-]/g, "").replace(/\.(?=\d{3}(\D|$))/g, "").replace(",", ".")); return isFinite(n) ? Math.round(n * 100) : 0; };
+const reais = c => (c / 100).toFixed(2).replace(".", ",");
+const uid = p => p + Math.random().toString(36).slice(2, 8) + Date.now().toString(36).slice(-3);
+const hojeISO = () => { const d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); };
+const dataBR = iso => iso ? iso.split("-").reverse().join("/") : "—";
+const soDigitos = s => String(s || "").replace(/\D/g, "");
+const zap = n => { let d = soDigitos(n); if (d.length <= 11) d = "55" + d; return d; };
+const fone = n => { const d = soDigitos(n).replace(/^55(?=\d{10,11}$)/, ""); return d.length === 11 ? `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}` : d.length === 10 ? `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}` : n; };
+
+function lerJSON(chave, padrao) { try { const v = localStorage.getItem(chave); return v ? JSON.parse(v) : padrao; } catch (e) { return padrao; } }
+function gravarJSON(chave, valor) { try { localStorage.setItem(chave, JSON.stringify(valor)); return true; } catch (e) { toast("Não foi possível salvar: memória do navegador cheia. Use fotos menores."); return false; } }
+
+let DB = lerJSON(CHAVE_DB, null);
+if (!DB || DB.versao !== VERSAO_DADOS) { DB = JSON.parse(JSON.stringify(DADOS_INICIAIS)); gravarJSON(CHAVE_DB, DB); }
+const salvar = () => gravarJSON(CHAVE_DB, DB);
+
+let sacola = lerJSON(CHAVE_SACOLA, []);
+if (!Array.isArray(sacola)) sacola = [];
+const salvarSacola = () => gravarJSON(CHAVE_SACOLA, sacola);
+
+let toastT;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("on"), 2400); }
+
+function fotoHTML(src, emoji, alt) {
+  return src ? `<img src="${res(src)}" alt="${esc(alt || "")}" loading="lazy">` : `<div class="emo" aria-hidden="true">${esc(emoji || "🎁")}</div>`;
+}
+
+/* ======================= CATÁLOGO ======================= */
+const estado = { cat: "todos", monte: { base: null, qtd: {} }, entrega: "entrega" };
+
+function itemMonte(id) { for (const e of DB.monte) for (const i of e.itens) if (i.id === id) return { ...i, etapa: e }; return null; }
+const num = v => Number(v) || 0;
+const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+
+/* soma os itens escolhidos, o espaço que ocupam e quais cestas comportam tudo */
+function calcMonte() {
+  let t = 0, n = 0, espaco = 0;
+  for (const [id, q] of Object.entries(estado.monte.qtd)) {
+    const i = itemMonte(id);
+    if (i && i.ativo && !i.etapa.unica && q > 0) { t += i.preco * q; n += q; espaco += num(i.espaco) * q; }
+  }
+  const etBase = DB.monte.find(e => e.unica);
+  const bases = (etBase ? etBase.itens : []).filter(b => b.ativo).sort((a, b) => num(a.capacidade) - num(b.capacidade) || a.preco - b.preco);
+  const cabem = bases.filter(b => num(b.capacidade) >= espaco);
+  let base = null;
+  if (estado.monte.base) { const b = itemMonte(estado.monte.base); if (b && b.ativo) base = b; }
+  if (base) t += base.preco;
+  return { t, n, espaco, base, bases, cabem, maior: bases.reduce((m, b) => Math.max(m, num(b.capacidade)), 0) };
+}
+
+/* se o cliente mudou os itens e a cesta escolhida não comporta mais, libera a escolha de novo */
+function conferirBase() {
+  const { espaco, n, base } = calcMonte();
+  if (base && (n === 0 || num(base.capacidade) < espaco)) {
+    estado.monte.base = null;
+    toast(n ? "A cesta escolhida não comporta mais os itens — escolha outra 🧺" : "Escolha os itens antes da cesta");
+  }
+}
+
+function renderCatalogo() {
+  const c = DB.config;
+  document.title = `${c.nome} — ${c.subtitulo}`;
+  $("#app").innerHTML = `
+  <div class="faixa"><div class="wrap"><span>🌸 Entregamos em ${esc(c.cidade)} e região</span><a href="#admin">Painel da loja</a></div></div>
+  <header class="topo"><div class="wrap">
+    <a class="marca" href="#inicio" aria-label="${esc(c.nome)} — início"><img src="${res("img/emblema.png")}" alt=""><span><b>${esc(c.nome)}</b><small>${esc(c.subtitulo)}</small></span></a>
+    <nav><a class="lnk" href="#produtos">Presentes</a><a class="lnk" href="#monte">Monte sua cesta</a>
+      <button class="btn-sacola" id="abrirSacola" aria-label="Abrir sacola"><span aria-hidden="true">🛍️</span><span class="txt">Sacola</span><span class="qt" id="qtSacola">0</span></button></nav>
+  </div></header>
+
+  <section class="hero" id="inicio"><div class="wrap">
+    <div>
+      <h1>${esc(c.nome)}</h1>
+      <p class="sub">${esc(c.subtitulo)} em ${esc(c.cidade.split("–")[0].trim())}</p>
+      <p class="txt">${esc(c.frase)} Escolha um presente pronto ou monte a cesta do seu jeito — a gente entrega com todo o carinho.</p>
+      <div class="acoes"><a class="bt bt-1" href="#produtos">Ver presentes prontos</a><a class="bt bt-2" href="#monte">Monte sua cesta</a></div>
+      <div class="tags"><span>🧺 Cestas</span><span>💐 Flores</span><span>🎈 Balões</span><span>☕ Canecas</span></div>
+    </div>
+    <div class="selo"><img src="${res("img/logo.png")}" alt="Logo ${esc(c.nome)}"></div>
+  </div></section>
+
+  <section class="bloco" id="produtos"><div class="wrap">
+    <div class="cab"><div><h2>Presentes <em>prontos</em></h2><p>Escolha, coloque na sacola e finalize pelo WhatsApp.</p></div></div>
+    <div class="chips" id="chips" role="toolbar" aria-label="Categorias"></div>
+    <div class="grade" id="grade"></div>
+  </div></section>
+
+  <section class="bloco monte" id="monte"><div class="wrap">
+    <div class="cab"><div><h2>Monte sua <em>cesta</em></h2><p>Escolha primeiro os itens — flores, chocolates, bebidas, balões e extras. Depois liberamos só as cestas que comportam tudo, e o valor vai somando enquanto você monta.</p></div></div>
+    <div class="monte-grid">
+      <div id="etapas"></div>
+      <aside class="resumo" id="resumoMonte" aria-live="polite"></aside>
+    </div>
+  </div></section>
+
+  <section class="bloco"><div class="wrap">
+    <div class="cab"><h2>Como <em>funciona</em></h2></div>
+    <div class="passos">
+      <div class="passo"><span class="n">1</span><b>Escolha</b><p>Um presente pronto ou a sua cesta montada item a item.</p></div>
+      <div class="passo"><span class="n">2</span><b>Entrega</b><p>Informe a região para calcular o frete, ou retire na loja sem custo.</p></div>
+      <div class="passo"><span class="n">3</span><b>Cartão</b><p>Escreva a mensagem e o nome de quem vai receber.</p></div>
+      <div class="passo"><span class="n">4</span><b>WhatsApp</b><p>O pedido chega pronto para a loja e o pagamento é combinado por lá.</p></div>
+    </div>
+  </div></section>
+
+  <footer class="rod"><div class="wrap">
+    <div><h4>${esc(c.nome)}</h4><p>${esc(c.frase)}</p></div>
+    <div><p><b>Atendimento</b></p><ul><li>${esc(c.horario)}</li><li>${esc(c.cidade)}${c.endereco ? " — " + esc(c.endereco) : ""}</li><li>${esc(c.antecedencia)}</li></ul></div>
+    <div><p><b>Fale com a gente</b></p><ul>
+      <li><a href="https://wa.me/${zap(c.whatsapp)}" target="_blank" rel="noopener">WhatsApp ${esc(fone(c.whatsapp))}</a></li>
+      <li><a href="https://instagram.com/${esc(c.instagram)}" target="_blank" rel="noopener">Instagram @${esc(c.instagram)}</a></li></ul></div>
+    <p class="cred">© ${new Date().getFullYear()} ${esc(c.nome)} · Site desenvolvido por <a href="https://wa.me/5551982165186" target="_blank" rel="noopener">TF Solutions</a></p>
+  </div></footer>
+
+  <div class="barra-monte" id="barraMonte"><div><span class="v">Sua cesta montada</span><br><b id="barraTotal">R$ 0,00</b></div><a class="bt bt-rosa" href="#resumoMonte">Ver resumo</a></div>
+
+  <div class="fundo" id="fundo"></div>
+  <aside class="gaveta" id="gaveta" aria-label="Sacola" aria-hidden="true">
+    <header><h2>Sua sacola</h2><button class="fechar" id="fecharSacola" aria-label="Fechar">×</button></header>
+    <div class="rolar" id="conteudoSacola"></div>
+    <footer id="rodapeSacola"></footer>
+  </aside>`;
+
+  renderChips(); renderGrade(); renderEtapas(); renderResumoMonte(); atualizarContador();
+  $("#abrirSacola").onclick = abrirSacola;
+  $("#fecharSacola").onclick = fecharSacola;
+  $("#fundo").onclick = fecharSacola;
+  observarMonte();
+}
+
+function renderChips() {
+  const usadas = DB.categorias.filter(c => DB.produtos.some(p => p.ativo && p.cat === c.id));
+  $("#chips").innerHTML = [`<button class="chip" data-cat="todos" aria-pressed="${estado.cat === "todos"}">✨ Todos</button>`]
+    .concat(usadas.map(c => `<button class="chip" data-cat="${esc(c.id)}" aria-pressed="${estado.cat === c.id}">${esc(c.emoji)} ${esc(c.nome)}</button>`)).join("");
+  $("#chips").onclick = e => { const b = e.target.closest(".chip"); if (!b) return; estado.cat = b.dataset.cat; renderChips(); renderGrade(); };
+}
+
+function renderGrade() {
+  let lista = DB.produtos.filter(p => p.ativo && (estado.cat === "todos" || p.cat === estado.cat));
+  if (estado.cat === "todos") lista = lista.slice().sort((a, b) => (b.destaque ? 1 : 0) - (a.destaque ? 1 : 0));
+  const cat = id => DB.categorias.find(c => c.id === id);
+  $("#grade").innerHTML = lista.length ? lista.map(p => `
+    <article class="card">
+      <div class="foto">${fotoHTML(p.img, cat(p.cat)?.emoji, p.nome)}${p.destaque ? '<span class="selo-dest">Mais pedido</span>' : ""}</div>
+      <div class="corpo"><h3>${esc(p.nome)}</h3><p class="desc">${esc(p.desc)}</p>
+        <div class="rodape"><span class="preco">${brl(p.preco)}</span><button class="add" data-add="${esc(p.id)}" aria-label="Adicionar ${esc(p.nome)} à sacola">+</button></div></div>
+    </article>`).join("") : `<p class="vazio" style="grid-column:1/-1">Nenhum produto nesta categoria por enquanto.</p>`;
+  $("#grade").onclick = e => { const b = e.target.closest("[data-add]"); if (b) addProduto(b.dataset.add); };
+}
+
+function renderEtapas() {
+  const calc = calcMonte();
+  let n = 0;
+  $("#etapas").innerHTML = DB.monte.map(et => {
+    const itens = et.itens.filter(i => i.ativo);
+    if (!itens.length) return "";
+    n++;
+    if (et.unica) return etapaCestas(et, n, calc);
+    let soma = 0;
+    itens.forEach(i => soma += i.preco * (estado.monte.qtd[i.id] || 0));
+    const feito = soma > 0;
+    return `<div class="etapa" data-etapa="${esc(et.id)}">
+      <header><span class="num ${feito ? "ok" : ""}">${feito ? "✓" : n}</span><div><h3>${esc(et.emoji)} ${esc(et.titulo)}</h3><p>${esc(et.dica)}</p></div>${feito ? `<span class="soma">${brl(soma)}</span>` : ""}</header>
+      <div class="opcoes">${itens.map(i => {
+        const q = estado.monte.qtd[i.id] || 0, e = num(i.espaco);
+        return `<div class="op ${q ? "sel" : ""}">
+          <span class="ic">${i.img ? `<img src="${res(i.img)}" alt="">` : esc(i.emoji)}</span>
+          <span class="info"><b>${esc(i.nome)}</b><span>${esc(i.desc)}</span><span class="pr">${brl(i.preco)}</span><span class="esp">${e ? "📦 ocupa " + plural(e, "espaço", "espaços") : "vai por fora da cesta"}</span></span>
+          <span class="qtd"><button data-menos="${esc(i.id)}" ${q ? "" : "disabled"} aria-label="Tirar ${esc(i.nome)}">−</button><output>${q}</output><button data-mais="${esc(i.id)}" aria-label="Adicionar ${esc(i.nome)}">+</button></span></div>`;
+      }).join("")}</div></div>`;
+  }).join("");
+  const el = $("#etapas");
+  el.onclick = e => {
+    const b = e.target.closest("[data-base]"), m = e.target.closest("[data-mais]"), l = e.target.closest("[data-menos]");
+    if (b) estado.monte.base = estado.monte.base === b.dataset.base ? null : b.dataset.base;
+    else if (m) { estado.monte.qtd[m.dataset.mais] = (estado.monte.qtd[m.dataset.mais] || 0) + 1; conferirBase(); }
+    else if (l) { estado.monte.qtd[l.dataset.menos] = Math.max(0, (estado.monte.qtd[l.dataset.menos] || 0) - 1); conferirBase(); }
+    else return;
+    const y = window.scrollY; renderEtapas(); renderResumoMonte(); window.scrollTo(0, y);
+  };
+  el.onkeydown = e => { const b = e.target.closest("[data-base]"); if (b && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); b.click(); } };
+}
+
+/* última etapa: as cestas só aparecem depois dos itens, e só as que comportam tudo ficam liberadas */
+function etapaCestas(et, n, calc) {
+  const { n: qtd, espaco, cabem, bases, maior, base } = calc;
+  let corpo;
+  if (!qtd) {
+    corpo = `<div class="trava">🔒 <b>Escolha os itens primeiro.</b><br>Assim que você adicionar flores, chocolates, bebidas, balões ou extras, mostramos aqui as cestas que comportam tudo.</div>`;
+  } else if (!cabem.length) {
+    corpo = `<div class="trava">😮 <b>Seus itens ocupam ${plural(espaco, "espaço", "espaços")}</b> — mais do que a nossa maior cesta (${maior}).<br>Tire alguns itens ou <a href="https://wa.me/${zap(DB.config.whatsapp)}" target="_blank" rel="noopener">fale com a gente no WhatsApp</a> para montar em duas cestas.</div>`;
+  } else {
+    corpo = `<p class="ocupa">Seus itens ocupam <b>${plural(espaco, "espaço", "espaços")}</b>. ${cabem.length === bases.length ? "Todas as cestas comportam:" : "Liberamos só as cestas que comportam tudo:"}</p>
+      <div class="opcoes">${bases.map(b => {
+        const cabe = num(b.capacidade) >= espaco, sel = estado.monte.base === b.id, ideal = cabe && b.id === cabem[0].id;
+        return `<div class="op base ${sel ? "sel" : ""} ${cabe ? "" : "bloq"}" ${cabe ? `role="radio" tabindex="0" aria-checked="${sel}" data-base="${esc(b.id)}"` : `aria-disabled="true"`}>
+          <span class="ic">${b.img ? `<img src="${res(b.img)}" alt="">` : esc(b.emoji)}</span>
+          <span class="info"><b>${esc(b.nome)}${ideal ? '<em class="ideal">Ideal</em>' : ""}</b><span>${esc(b.desc)} · até ${plural(num(b.capacidade), "espaço", "espaços")}</span><span class="pr">${cabe ? brl(b.preco) : "Não comporta os seus itens"}</span></span>
+          ${cabe ? '<span class="radio" aria-hidden="true"></span>' : '<span class="cad" aria-hidden="true">🔒</span>'}</div>`;
+      }).join("")}</div>`;
+  }
+  const feito = !!base;
+  return `<div class="etapa" data-etapa="${esc(et.id)}">
+    <header><span class="num ${feito ? "ok" : ""}">${feito ? "✓" : qtd ? n : "🔒"}</span><div><h3>${esc(et.emoji)} ${esc(et.titulo)}</h3><p>${esc(et.dica)}</p></div>${feito ? `<span class="soma">${brl(base.preco)}</span>` : ""}</header>
+    ${corpo}</div>`;
+}
+
+function renderResumoMonte() {
+  const c = calcMonte();
+  const linhas = [];
+  for (const et of DB.monte) {
+    if (et.unica) continue;
+    for (const i of et.itens) { const q = estado.monte.qtd[i.id] || 0; if (i.ativo && q > 0) linhas.push([i.nome, i.preco * q, q]); }
+  }
+  const cap = c.base ? num(c.base.capacidade) : 0;
+  const pct = cap ? Math.min(100, Math.round(c.espaco / cap * 100)) : 0;
+  $("#resumoMonte").innerHTML = `<h3>Sua cesta</h3>
+    ${linhas.length ? `<ul>${linhas.map(([nm, v, q]) => `<li><span>${q > 1 ? q + "× " : ""}${esc(nm)}</span><span>${brl(v)}</span></li>`).join("")}</ul>`
+      : `<p class="nota" style="margin:12px 0">Comece escolhendo os itens. Cada um aparece aqui com o valor, e depois liberamos as cestas que comportam tudo.</p>`}
+    ${c.base ? `<div class="cesta-esc"><span>🧺 ${esc(c.base.nome)}</span><span>${brl(c.base.preco)}</span></div>
+      <div class="medidor" role="img" aria-label="Ocupação da cesta"><span style="width:${pct}%"></span></div>
+      <p class="nota">Ocupando ${c.espaco} de ${plural(cap, "espaço", "espaços")}</p>`
+      : c.n ? `<p class="aviso">${c.cabem.length ? "Agora escolha a cesta — liberamos só as que comportam seus itens." : "Seus itens não cabem em uma cesta só."}</p>` : ""}
+    <div class="tot"><span>${plural(c.n, "item", "itens")}${c.base ? " + cesta" : ""}</span><b>${brl(c.t)}</b></div>
+    <label class="campo"><span class="mini">Alguma observação? (cores, preferências…)</span><textarea id="obsMonte" maxlength="300" placeholder="Ex.: laço rosa, sem chocolate amargo">${esc(estado.monte.obs || "")}</textarea></label>
+    <div class="linha-acoes"><button class="bt bt-1" id="addMonte" style="flex:1" ${c.base && c.n ? "" : "disabled"}>Confirmar cesta</button>
+    ${linhas.length || c.base ? `<button class="bt bt-2 bt-p" id="limparMonte">Limpar</button>` : ""}</div>`;
+  $("#obsMonte").oninput = e => estado.monte.obs = e.target.value;
+  $("#addMonte").onclick = addMonte;
+  const lp = $("#limparMonte"); if (lp) lp.onclick = () => { estado.monte = { base: null, qtd: {} }; renderEtapas(); renderResumoMonte(); };
+  const bt = $("#barraTotal"); if (bt) bt.textContent = brl(c.t);
+  const barra = $("#barraMonte"); if (barra) barra.dataset.tem = c.n ? "1" : "";
+  atualizarBarra();
+}
+
+let monteVisivel = false;
+function observarMonte() {
+  if (!("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver(es => { monteVisivel = es[0].isIntersecting; atualizarBarra(); }, { threshold: 0.05 });
+  io.observe($("#etapas"));
+}
+function atualizarBarra() { const b = $("#barraMonte"); if (b) b.classList.toggle("on", monteVisivel && b.dataset.tem === "1"); }
+
+function addProduto(id) {
+  const p = DB.produtos.find(x => x.id === id); if (!p) return;
+  const ex = sacola.find(x => x.tipo === "produto" && x.pid === id);
+  if (ex) ex.qtd++; else sacola.push({ key: uid("s"), tipo: "produto", pid: id, nome: p.nome, preco: p.preco, img: p.img, qtd: 1 });
+  salvarSacola(); atualizarContador(); toast(`${p.nome} foi para a sacola 🌸`);
+}
+
+function addMonte() {
+  const c = calcMonte();
+  if (!c.n) { toast("Escolha os itens da cesta primeiro"); return; }
+  if (!c.base) { toast("Agora escolha a cesta 🧺"); return; }
+  const comp = [{ nome: c.base.nome, qtd: 1, preco: c.base.preco, etapa: "Cesta", emoji: "🧺", base: true, capacidade: num(c.base.capacidade) }];
+  for (const et of DB.monte) {
+    if (et.unica) continue;
+    for (const i of et.itens) { const q = estado.monte.qtd[i.id] || 0; if (i.ativo && q > 0) comp.push({ nome: i.nome, desc: i.desc, qtd: q, preco: i.preco, etapa: et.titulo, emoji: et.emoji, espaco: num(i.espaco) }); }
+  }
+  const total = comp.reduce((s, x) => s + x.preco * x.qtd, 0);
+  const numero = sacola.filter(x => x.tipo === "monte").length + 1;
+  sacola.push({ key: uid("s"), tipo: "monte", nome: `Cesta montada por você${numero > 1 ? " #" + numero : ""}`, preco: total, qtd: 1, comp, obs: (estado.monte.obs || "").trim(), emoji: "🧺", espaco: c.espaco, capacidade: num(c.base.capacidade) });
+  salvarSacola(); estado.monte = { base: null, qtd: {} };
+  renderEtapas(); renderResumoMonte(); atualizarContador(); toast("Cesta confirmada! Agora é só informar a entrega 🧺"); abrirSacola();
+}
+
+function atualizarContador() { const q = sacola.reduce((s, i) => s + i.qtd, 0); const el = $("#qtSacola"); if (el) el.textContent = q; }
+
+/* ---------- sacola ---------- */
+const form = { nome: "", tel: "", regiao: "", endereco: "", bairro: "", ref: "", data: "", periodo: "manha", pag: "pix", destinatario: "", cartao: "", obs: "" };
+let erroSacola = "";
+
+function abrirSacola() { renderSacola(); $("#gaveta").classList.add("on"); $("#gaveta").setAttribute("aria-hidden", "false"); $("#fundo").classList.add("on"); document.body.style.overflow = "hidden"; }
+function fecharSacola() { $("#gaveta").classList.remove("on"); $("#gaveta").setAttribute("aria-hidden", "true"); $("#fundo").classList.remove("on"); document.body.style.overflow = ""; }
+
+function contas() {
+  const sub = sacola.reduce((s, i) => s + i.preco * i.qtd, 0);
+  const reg = DB.fretes.find(r => r.id === form.regiao && r.ativo);
+  const frete = estado.entrega === "entrega" && reg ? reg.valor : 0;
+  return { sub, frete, reg, total: sub + frete };
+}
+
+function renderSacola() {
+  const c = DB.config, cont = $("#conteudoSacola");
+  if (!DB.config.retirada) estado.entrega = "entrega";
+  if (!sacola.length) {
+    cont.innerHTML = `<div class="vazio" style="margin-top:20px"><p style="font-size:40px">🛍️</p><p><b>Sua sacola está vazia.</b></p><p class="nota">Escolha um presente pronto ou monte a sua cesta.</p></div>`;
+    $("#rodapeSacola").innerHTML = `<button class="bt bt-1" id="continuar">Ver presentes</button>`;
+    $("#continuar").onclick = () => { fecharSacola(); location.hash = "#produtos"; };
+    return;
+  }
+  const { sub, frete, reg, total } = contas();
+  const regioes = DB.fretes.filter(r => r.ativo);
+  cont.innerHTML = `
+    ${sacola.map(i => `<div class="item">
+      <div class="ft">${i.img ? `<img src="${res(i.img)}" alt="">` : esc(i.emoji || "🎁")}</div>
+      <div class="meio"><b>${esc(i.nome)}</b>
+        ${i.tipo === "monte" ? `<div class="comp">${i.comp.map(x => `${x.qtd > 1 ? x.qtd + "× " : ""}${esc(x.nome)}`).join(" · ")}${i.obs ? `<br>Obs.: ${esc(i.obs)}` : ""}</div>` : ""}
+        <div class="linha"><span class="qtd"><button data-sm="${i.key}" aria-label="Diminuir">−</button><output>${i.qtd}</output><button data-sp="${i.key}" aria-label="Aumentar">+</button></span><span class="preco">${brl(i.preco * i.qtd)}</span></div>
+        <button class="rem" data-sr="${i.key}">Remover</button></div></div>`).join("")}
+
+    <fieldset><legend>Como receber</legend>
+      <div class="modos">
+        <button class="modo" data-modo="entrega" aria-pressed="${estado.entrega === "entrega"}"><b>🚚 Entrega</b><span>Frete por região</span></button>
+        ${c.retirada ? `<button class="modo" data-modo="retirada" aria-pressed="${estado.entrega === "retirada"}"><b>🏪 Retirar na loja</b><span>Sem frete</span></button>` : ""}
+      </div>
+      ${estado.entrega === "entrega" ? `
+        <div class="campo"><label for="fRegiao">Região de entrega</label>
+          <select id="fRegiao" data-f="regiao"><option value="">Selecione para calcular o frete</option>
+          ${regioes.map(r => `<option value="${r.id}" ${form.regiao === r.id ? "selected" : ""}>${esc(r.nome)} — ${brl(r.valor)}</option>`).join("")}</select>
+          <span class="nota">Não achou sua cidade? Finalize mesmo assim escolhendo a mais próxima e combinamos no WhatsApp.</span></div>
+        <div class="campo"><label for="fEnd">Endereço de entrega</label><input id="fEnd" type="text" data-f="endereco" value="${esc(form.endereco)}" placeholder="Rua, número, complemento" autocomplete="street-address"></div>
+        <div class="dois"><div class="campo"><label for="fBairro">Bairro</label><input id="fBairro" type="text" data-f="bairro" value="${esc(form.bairro)}"></div>
+        <div class="campo"><label for="fRef">Referência</label><input id="fRef" type="text" data-f="ref" value="${esc(form.ref)}" placeholder="Opcional"></div></div>`
+      : `<p class="nota" style="margin-top:10px">📍 Retirada: ${esc(c.endereco || "endereço combinado pelo WhatsApp")} · ${esc(c.horario)}</p>`}
+      <div class="dois"><div class="campo"><label for="fData">Data ${estado.entrega === "entrega" ? "da entrega" : "da retirada"}</label><input id="fData" type="date" data-f="data" min="${hojeISO()}" value="${esc(form.data)}"></div>
+      <div class="campo"><label for="fPer">Período</label><select id="fPer" data-f="periodo">${Object.entries(PERIODOS).map(([k, v]) => `<option value="${k}" ${form.periodo === k ? "selected" : ""}>${v}</option>`).join("")}</select></div></div>
+      <p class="nota">${esc(c.antecedencia)}</p>
+    </fieldset>
+
+    <fieldset><legend>O presente</legend>
+      <div class="campo"><label for="fDest">Para quem é? (nome de quem recebe)</label><input id="fDest" type="text" data-f="destinatario" value="${esc(form.destinatario)}" placeholder="Ex.: Maria"></div>
+      <div class="campo"><label for="fCartao">Mensagem do cartão ${c.cartaoGratis ? "(cortesia)" : ""}</label><textarea id="fCartao" data-f="cartao" maxlength="400" placeholder="Escreva aqui a mensagem que vai no cartão">${esc(form.cartao)}</textarea></div>
+    </fieldset>
+
+    <fieldset><legend>Seus dados</legend>
+      <div class="campo"><label for="fNome">Seu nome</label><input id="fNome" type="text" data-f="nome" value="${esc(form.nome)}" autocomplete="name"></div>
+      <div class="campo"><label for="fTel">Seu WhatsApp</label><input id="fTel" type="tel" inputmode="tel" data-f="tel" value="${esc(form.tel)}" placeholder="(51) 99999-9999" autocomplete="tel"></div>
+      <div class="campo"><label for="fPag">Forma de pagamento</label><select id="fPag" data-f="pag">${Object.entries(PAGAMENTOS).map(([k, v]) => `<option value="${k}" ${form.pag === k ? "selected" : ""}>${v}</option>`).join("")}</select>
+        <span class="nota">Nada é cobrado no site — o pagamento é combinado no WhatsApp.</span></div>
+      <div class="campo"><label for="fObs">Observações</label><textarea id="fObs" data-f="obs" maxlength="400" placeholder="Opcional">${esc(form.obs)}</textarea></div>
+    </fieldset>
+
+    <div class="contas" id="contas"></div>`;
+  renderContas();
+  $("#rodapeSacola").innerHTML = `<button class="bt bt-zap" id="finalizar">Finalizar pelo WhatsApp</button><p class="erro-msg" id="erroSacola" role="alert">${esc(erroSacola)}</p>`;
+  $("#finalizar").onclick = finalizar;
+
+  cont.onclick = e => {
+    const m = e.target.closest("[data-sm]"), p = e.target.closest("[data-sp]"), r = e.target.closest("[data-sr]"), md = e.target.closest("[data-modo]");
+    if (md) { estado.entrega = md.dataset.modo; renderSacola(); return; }
+    const k = (m || p || r)?.dataset; if (!k) return;
+    const it = sacola.find(x => x.key === (k.sm || k.sp || k.sr)); if (!it) return;
+    if (p) it.qtd++; else if (m) it.qtd = Math.max(1, it.qtd - 1); else sacola = sacola.filter(x => x !== it);
+    salvarSacola(); atualizarContador(); const y = cont.scrollTop; renderSacola(); cont.scrollTop = y;
+  };
+  cont.oninput = cont.onchange = e => { const f = e.target.dataset.f; if (!f) return; form[f] = e.target.value; if (f === "regiao") renderContas(); };
+}
+
+function renderContas() {
+  const { sub, frete, reg, total } = contas();
+  const el = $("#contas"); if (!el) return;
+  el.innerHTML = `<div><span>Produtos</span><span>${brl(sub)}</span></div>
+    <div><span>Frete${reg && estado.entrega === "entrega" ? " (" + esc(reg.nome) + ")" : ""}</span><span>${estado.entrega === "retirada" ? "Grátis (retirada)" : reg ? brl(frete) : "selecione a região"}</span></div>
+    <div class="t"><span>Total</span><span>${brl(total)}</span></div>`;
+}
+
+function finalizar() {
+  const c = DB.config, { sub, frete, reg, total } = contas();
+  const faltas = [];
+  if (estado.entrega === "entrega") { if (!reg) faltas.push("a região de entrega"); if (!form.endereco.trim()) faltas.push("o endereço"); }
+  if (!form.data) faltas.push("a data");
+  if (!form.nome.trim()) faltas.push("o seu nome");
+  if (soDigitos(form.tel).length < 10) faltas.push("o seu WhatsApp com DDD");
+  if (faltas.length) { erroSacola = "Falta preencher: " + faltas.join(", ") + "."; $("#erroSacola").textContent = erroSacola; return; }
+  erroSacola = "";
+  DB.seq = (DB.seq || 100) + 1;
+  const ped = {
+    id: uid("o"), codigo: "LF" + DB.seq, criado: new Date().toISOString(), status: "novo", pago: false,
+    cliente: form.nome.trim(), tel: soDigitos(form.tel), entrega: estado.entrega,
+    regiao: reg ? reg.nome : "", endereco: form.endereco.trim(), bairro: form.bairro.trim(), ref: form.ref.trim(),
+    data: form.data, periodo: form.periodo, pagamento: form.pag, destinatario: form.destinatario.trim(), cartao: form.cartao.trim(), obs: form.obs.trim(),
+    itens: sacola.map(i => ({ nome: i.nome, qtd: i.qtd, preco: i.preco, tipo: i.tipo, comp: i.comp || null, obsItem: i.obs || "", espaco: i.espaco || 0, capacidade: i.capacidade || 0 })),
+    subtotal: sub, frete, desconto: 0, total
+  };
+  DB.pedidos.unshift(ped); salvar();
+  const url = `https://wa.me/${zap(c.whatsapp)}?text=${encodeURIComponent(mensagemPedido(ped))}`;
+  sacola = []; salvarSacola(); atualizarContador();
+  renderSacola();
+  $("#conteudoSacola").innerHTML = `<div class="vazio" style="margin-top:20px"><p style="font-size:40px">💐</p><p><b>Pedido ${ped.codigo} registrado!</b></p>
+    <p class="nota">Se o WhatsApp não abriu sozinho, toque no botão abaixo para enviar o pedido para a ${esc(c.nome)}.</p>
+    <p style="margin-top:14px"><a class="bt bt-zap" href="${url}" target="_blank" rel="noopener">Abrir WhatsApp</a></p></div>`;
+  window.open(url, "_blank");
+}
+
+/* detalhe da cesta montada, agrupado por etapa, para a mensagem do WhatsApp */
+function detalheCesta(i) {
+  const out = [], base = i.comp.find(x => x.base), grupos = {};
+  if (base) out.push(`   🧺 *Cesta:* ${base.nome}${base.capacidade ? ` (até ${base.capacidade} espaços)` : ""} — ${brl(base.preco)}`);
+  for (const x of i.comp) if (!x.base) (grupos[x.etapa] = grupos[x.etapa] || { emoji: x.emoji || "•", itens: [] }).itens.push(x);
+  for (const [et, g] of Object.entries(grupos)) {
+    out.push(`   ${g.emoji} *${et}:*`);
+    for (const x of g.itens) out.push(`      ◦ ${x.qtd}x ${x.nome}${x.desc ? " (" + x.desc + ")" : ""} — ${x.qtd > 1 ? brl(x.preco) + " cada = " : ""}${brl(x.preco * x.qtd)}`);
+  }
+  if (i.capacidade) out.push(`   📦 Ocupação: ${i.espaco} de ${i.capacidade} espaços`);
+  return out;
+}
+
+function mensagemPedido(p) {
+  const c = DB.config, L = [];
+  L.push(`🌸 *Pedido — ${c.nome}*`); L.push(`Pedido: *${p.codigo}*`); L.push("");
+  L.push(`*Cliente:* ${p.cliente}`); L.push(`*WhatsApp:* ${fone(p.tel)}`); L.push("");
+  L.push("🧺 *Itens*");
+  for (const i of p.itens) {
+    L.push(`• ${i.qtd}x ${i.nome} — ${brl(i.preco * i.qtd)}`);
+    if (i.comp) L.push(...detalheCesta(i));
+    if (i.obsItem) L.push(`   _Obs.: ${i.obsItem}_`);
+  }
+  L.push("");
+  if (p.entrega === "entrega") {
+    L.push(`🚚 *Entrega — ${p.regiao}*`);
+    L.push(`Endereço: ${[p.endereco, p.bairro].filter(Boolean).join(" — ")}`);
+    if (p.ref) L.push(`Referência: ${p.ref}`);
+  } else { L.push("🏪 *Retirada na loja*"); }
+  L.push(`Data: ${dataBR(p.data)} · ${PERIODOS[p.periodo] || p.periodo}`);
+  L.push("");
+  if (p.destinatario) L.push(`🎁 *Para:* ${p.destinatario}`);
+  if (p.cartao) L.push(`💌 *Cartão:* "${p.cartao}"`);
+  if (p.destinatario || p.cartao) L.push("");
+  L.push(`Produtos: ${brl(p.subtotal)}`);
+  if (p.entrega === "entrega") L.push(`Frete: ${brl(p.frete)}`);
+  if (p.desconto) L.push(`Desconto: -${brl(p.desconto)}`);
+  L.push(`*Total: ${brl(p.total)}*`);
+  L.push(`Pagamento: ${PAGAMENTOS[p.pagamento] || p.pagamento} (combinar aqui pelo WhatsApp)`);
+  if (p.obs) { L.push(""); L.push(`Obs.: ${p.obs}`); }
+  return L.join("\n");
+}
+
+/* ======================= PAINEL ======================= */
+let aba = "resumo", logado = sessionStorage.getItem("lf_logado") === "1";
+let filtroPed = "abertos", mesFin = hojeISO().slice(0, 7);
+
+function renderAdmin() {
+  document.body.style.overflow = "";
+  if (!logado) {
+    $("#app").innerHTML = `<div class="adm"><div class="login"><img src="${res("img/logo.png")}" alt=""><h1>Painel</h1><p class="mini">Área da loja ${esc(DB.config.nome)}</p>
+      <form id="fLogin"><label class="campo"><span class="mini"><b>Senha</b></span><input type="password" id="senha" autocomplete="current-password" required></label>
+      <button class="bt bt-1">Entrar</button><p class="erro-msg" id="erroLogin"></p>
+      <p class="mini" style="text-align:center">Demonstração — senha inicial: <b>lacos2026</b></p>
+      <a class="mini" href="#" style="text-align:center">← Voltar ao catálogo</a></form></div></div>`;
+    $("#fLogin").onsubmit = e => { e.preventDefault(); if ($("#senha").value === DB.config.senha) { logado = true; sessionStorage.setItem("lf_logado", "1"); renderAdmin(); } else $("#erroLogin").textContent = "Senha incorreta."; };
+    setTimeout(() => $("#senha")?.focus(), 50);
+    return;
+  }
+  const novos = DB.pedidos.filter(p => p.status === "novo").length;
+  const abas = [["resumo", "Resumo"], ["pedidos", `Pedidos${novos ? " (" + novos + ")" : ""}`], ["produtos", "Presentes prontos"], ["monte", "Monte sua cesta"], ["fretes", "Fretes"], ["financeiro", "Entradas e saídas"], ["config", "Configurações"]];
+  $("#app").innerHTML = `<div class="adm">
+    <div class="adm-topo"><div class="wrap"><img src="${res("img/emblema.png")}" alt=""><b>${esc(DB.config.nome)}</b><a href="#">Ver catálogo</a><button id="sair">Sair</button></div></div>
+    <div class="abas"><div class="wrap" role="tablist">${abas.map(([k, v]) => `<button role="tab" data-aba="${k}" aria-selected="${aba === k}">${v}</button>`).join("")}</div></div>
+    <main><div class="wrap" id="conteudoAdm"></div></main></div>`;
+  $(".abas").onclick = e => { const b = e.target.closest("[data-aba]"); if (b) { aba = b.dataset.aba; renderAdmin(); window.scrollTo(0, 0); } };
+  $("#sair").onclick = () => { logado = false; sessionStorage.removeItem("lf_logado"); renderAdmin(); };
+  ({ resumo: admResumo, pedidos: admPedidos, produtos: admProdutos, monte: admMonte, fretes: admFretes, financeiro: admFinanceiro, config: admConfig })[aba]();
+}
+
+function admResumo() {
+  const mes = hojeISO().slice(0, 7);
+  const fin = DB.financeiro.filter(f => f.data.slice(0, 7) === mes);
+  const ent = fin.filter(f => f.tipo === "entrada").reduce((s, f) => s + f.valor, 0);
+  const sai = fin.filter(f => f.tipo === "saida").reduce((s, f) => s + f.valor, 0);
+  const abertos = DB.pedidos.filter(p => !["entregue", "cancelado"].includes(p.status));
+  const receber = DB.pedidos.filter(p => p.status !== "cancelado" && !p.pago).reduce((s, p) => s + p.total, 0);
+  const prox = abertos.slice().sort((a, b) => (a.data || "").localeCompare(b.data || "")).slice(0, 8);
+  $("#conteudoAdm").innerHTML = `<h2>Resumo do mês</h2>
+    <div class="kpis"><div class="kpi"><span>Entradas</span><b>${brl(ent)}</b></div><div class="kpi"><span>Saídas</span><b>${brl(sai)}</b></div>
+    <div class="kpi"><span>Saldo</span><b>${brl(ent - sai)}</b></div><div class="kpi"><span>A receber</span><b>${brl(receber)}</b></div></div>
+    <div class="painel"><h3>Próximas entregas e retiradas</h3>${prox.length ? `<div class="rolagem"><table class="tabela"><thead><tr><th>Data</th><th>Pedido</th><th>Cliente</th><th>Como</th><th>Situação</th><th class="n">Total</th></tr></thead><tbody>
+      ${prox.map(p => `<tr><td>${dataBR(p.data)}<br><span class="mini">${esc((PERIODOS[p.periodo] || "").split(" ")[0])}</span></td><td><b>${p.codigo}</b></td><td>${esc(p.cliente)}</td><td>${p.entrega === "entrega" ? "🚚 " + esc(p.regiao) : "🏪 Retirada"}</td><td><span class="st st-${p.status}">${STATUS[p.status]}</span></td><td class="n">${brl(p.total)}</td></tr>`).join("")}
+      </tbody></table></div>` : `<p class="mini">Nenhum pedido em aberto. Os pedidos feitos no catálogo aparecem aqui.</p>`}</div>
+    <div class="painel"><h3>Números gerais</h3><p class="mini">${DB.pedidos.length} ${DB.pedidos.length === 1 ? "pedido registrado" : "pedidos registrados"} · ${abertos.length} em aberto · ${DB.produtos.filter(p => p.ativo).length} presentes no catálogo</p></div>`;
+}
+
+function admPedidos() {
+  const filtros = { abertos: "Em aberto", todos: "Todos", entregue: "Entregues", cancelado: "Cancelados", cal: "Calendário" };
+  let lista = DB.pedidos;
+  if (filtroPed === "abertos") lista = lista.filter(p => !["entregue", "cancelado"].includes(p.status));
+  else if (filtroPed !== "todos" && filtroPed !== "cal") lista = lista.filter(p => p.status === filtroPed);
+  $("#conteudoAdm").innerHTML = `<div class="cab" style="margin-bottom:6px"><h2 style="margin:0">Pedidos</h2><button class="bt bt-1 bt-p" id="novoPed">+ Pedido manual</button></div>
+    <div class="chips" style="margin:0 0 6px">${Object.entries(filtros).map(([k, v]) => `<button class="chip" data-fp="${k}" aria-pressed="${filtroPed === k}">${v}</button>`).join("")}</div>
+    <div id="listaPed"></div>`;
+  $(".chips").onclick = e => { const b = e.target.closest("[data-fp]"); if (b) { filtroPed = b.dataset.fp; admPedidos(); } };
+  $("#novoPed").onclick = () => modalPedidoManual();
+  if (filtroPed === "cal") return calendario();
+  $("#listaPed").innerHTML = lista.length ? `<div class="lista">${lista.map(cardPedido).join("")}</div>` : `<p class="vazio">Nenhum pedido aqui.</p>`;
+  $("#listaPed").onclick = acoesPedido; $("#listaPed").onchange = acoesPedido;
+}
+
+function cardPedido(p) {
+  return `<div class="ped" data-id="${p.id}">
+    <div class="l1"><span class="cod">${p.codigo}</span><span class="st st-${p.status}">${STATUS[p.status]}</span>${p.pago ? '<span class="pago">Pago</span>' : ""}<span style="margin-left:auto;font-weight:800">${brl(p.total)}</span></div>
+    <div class="l2">${esc(p.cliente)} · ${esc(fone(p.tel))} · ${dataBR(p.data)} (${esc((PERIODOS[p.periodo] || "").split(" ")[0])}) · ${p.entrega === "entrega" ? "🚚 " + esc(p.regiao) : "🏪 Retirada"}</div>
+    <details><summary>Ver itens e detalhes</summary>
+      <ul style="margin:8px 0;padding-left:18px">${p.itens.map(i => `<li>${i.qtd}x ${esc(i.nome)} — ${brl(i.preco * i.qtd)}${i.comp ? `<br><span class="mini">${i.comp.map(x => `${x.qtd > 1 ? x.qtd + "× " : ""}${esc(x.nome)}`).join(" · ")}</span>` : ""}${i.obsItem ? `<br><span class="mini">Obs.: ${esc(i.obsItem)}</span>` : ""}</li>`).join("")}</ul>
+      ${p.entrega === "entrega" ? `<p class="mini">Endereço: ${esc([p.endereco, p.bairro].filter(Boolean).join(" — "))}${p.ref ? " · Ref.: " + esc(p.ref) : ""}</p>` : ""}
+      ${p.destinatario ? `<p class="mini">Para: <b>${esc(p.destinatario)}</b></p>` : ""}${p.cartao ? `<p class="mini">Cartão: “${esc(p.cartao)}”</p>` : ""}
+      ${p.obs ? `<p class="mini">Obs.: ${esc(p.obs)}</p>` : ""}
+      <p class="mini">Produtos ${brl(p.subtotal)} · Frete ${brl(p.frete)}${p.desconto ? " · Desconto -" + brl(p.desconto) : ""} · Pagamento: ${PAGAMENTOS[p.pagamento] || p.pagamento} · Feito em ${new Date(p.criado).toLocaleString("pt-BR")}</p>
+    </details>
+    <div class="acoes"><select data-acao="status" aria-label="Situação">${Object.entries(STATUS).map(([k, v]) => `<option value="${k}" ${p.status === k ? "selected" : ""}>${v}</option>`).join("")}</select>
+      ${p.pago ? "" : `<button class="bt bt-1 bt-p" data-acao="pagar">Registrar pagamento</button>`}
+      <button class="bt bt-2 bt-p" data-acao="desconto">Desconto</button>
+      <a class="bt bt-zap bt-p" target="_blank" rel="noopener" href="https://wa.me/${zap(p.tel)}?text=${encodeURIComponent(`Olá, ${p.cliente.split(" ")[0]}! Aqui é da ${DB.config.nome} 🌸\nSobre o seu pedido *${p.codigo}* (${STATUS[p.status]}):\n${p.entrega === "entrega" ? "Entrega" : "Retirada"}: ${dataBR(p.data)} · ${PERIODOS[p.periodo] || ""}\nTotal: ${brl(p.total)}`)}">WhatsApp</a>
+      <button class="bt bt-2 bt-p" data-acao="excluir" style="color:var(--erro);border-color:var(--erro)">Excluir</button></div></div>`;
+}
+
+function acoesPedido(e) {
+  const el = e.target.closest("[data-acao]"); if (!el) return;
+  const acao = el.dataset.acao; if (acao === "status" && e.type !== "change") return;
+  if (acao !== "status" && e.type === "change") return;
+  const p = DB.pedidos.find(x => x.id === el.closest(".ped").dataset.id); if (!p) return;
+  if (acao === "status") { p.status = el.value; toast(`${p.codigo}: ${STATUS[p.status]}`); }
+  if (acao === "pagar") { p.pago = true; DB.financeiro.unshift({ id: uid("f"), data: hojeISO(), tipo: "entrada", desc: `Pedido ${p.codigo} — ${p.cliente}`, valor: p.total, pedido: p.id }); toast("Pagamento lançado em Entradas"); }
+  if (acao === "desconto") {
+    const v = prompt(`Desconto em R$ para ${p.codigo} (atual: ${reais(p.desconto || 0)})`, reais(p.desconto || 0)); if (v === null) return;
+    p.desconto = Math.min(centavos(v), p.subtotal + p.frete); p.total = p.subtotal + p.frete - p.desconto;
+  }
+  if (acao === "excluir") { if (!confirm(`Excluir o pedido ${p.codigo}? Isso não pode ser desfeito.`)) return; DB.pedidos = DB.pedidos.filter(x => x !== p); }
+  salvar(); renderAdmin();
+}
+
+function calendario() {
+  const [a, m] = (mesFin || hojeISO().slice(0, 7)).split("-").map(Number);
+  const primeiro = new Date(a, m - 1, 1), dias = new Date(a, m, 0).getDate();
+  const ped = DB.pedidos.filter(p => p.status !== "cancelado" && (p.data || "").startsWith(`${a}-${String(m).padStart(2, "0")}`));
+  let h = `<div class="painel"><div class="linha-acoes" style="margin:0 0 10px;align-items:center"><button class="bt bt-2 bt-p" data-mes="-1">‹</button><b style="flex:1;text-align:center">${primeiro.toLocaleDateString("pt-BR", { month: "long", year: "numeric" })}</b><button class="bt bt-2 bt-p" data-mes="1">›</button></div><div class="cal">`;
+  h += ["D", "S", "T", "Q", "Q", "S", "S"].map(d => `<div class="hd">${d}</div>`).join("");
+  for (let i = 0; i < primeiro.getDay(); i++) h += "<div style='background:none'></div>";
+  for (let d = 1; d <= dias; d++) {
+    const iso = `${a}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`, ps = ped.filter(p => p.data === iso);
+    h += `<div class="${ps.length ? "tem" : ""}"><b>${d}</b>${ps.map(p => `${p.codigo}`).join("<br>")}</div>`;
+  }
+  $("#listaPed").innerHTML = h + "</div></div>";
+  $("#listaPed").onclick = e => { const b = e.target.closest("[data-mes]"); if (!b) return; const dt = new Date(a, m - 1 + Number(b.dataset.mes), 1); mesFin = `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, "0")}`; calendario(); };
+}
+
+function abrirModal(html, aoMontar) {
+  const d = document.createElement("div"); d.className = "modal"; d.innerHTML = `<div class="caixa" role="dialog" aria-modal="true">${html}</div>`;
+  document.body.appendChild(d); document.body.style.overflow = "hidden";
+  const fechar = () => { d.remove(); document.body.style.overflow = ""; };
+  d.addEventListener("click", e => { if (e.target === d || e.target.closest("[data-fechar]")) fechar(); });
+  aoMontar(d, fechar);
+}
+
+function modalPedidoManual() {
+  abrirModal(`<h3>Pedido manual</h3><p class="mini">Para encomendas combinadas pelo Instagram, telefone ou balcão.</p>
+    <form class="form-adm col2" id="fm">
+      <label class="campo"><span class="mini"><b>Cliente</b></span><input type="text" name="cliente" required></label>
+      <label class="campo"><span class="mini"><b>WhatsApp</b></span><input type="tel" name="tel"></label>
+      <label class="campo" style="grid-column:1/-1"><span class="mini"><b>O que foi pedido</b></span><input type="text" name="desc" required placeholder="Ex.: Cesta café da manhã + balão"></label>
+      <label class="campo"><span class="mini"><b>Valor dos produtos (R$)</b></span><input type="text" inputmode="decimal" name="valor" required></label>
+      <label class="campo"><span class="mini"><b>Entrega</b></span><select name="regiao"><option value="">Retirada na loja</option>${DB.fretes.map(r => `<option value="${r.id}">${esc(r.nome)} — ${brl(r.valor)}</option>`).join("")}</select></label>
+      <label class="campo"><span class="mini"><b>Data</b></span><input type="date" name="data" required value="${hojeISO()}"></label>
+      <label class="campo"><span class="mini"><b>Período</b></span><select name="periodo">${Object.entries(PERIODOS).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
+      <label class="campo" style="grid-column:1/-1"><span class="mini"><b>Endereço / observações</b></span><input type="text" name="obs"></label>
+      <div class="linha-acoes" style="grid-column:1/-1"><button class="bt bt-1">Salvar pedido</button><button type="button" class="bt bt-2" data-fechar>Cancelar</button></div></form>`,
+    (d, fechar) => {
+      $("#fm", d).onsubmit = e => {
+        e.preventDefault(); const f = Object.fromEntries(new FormData(e.target));
+        const reg = DB.fretes.find(r => r.id === f.regiao), sub = centavos(f.valor), fr = reg ? reg.valor : 0;
+        DB.seq = (DB.seq || 100) + 1;
+        DB.pedidos.unshift({ id: uid("o"), codigo: "LF" + DB.seq, criado: new Date().toISOString(), status: "confirmado", pago: false, cliente: f.cliente.trim(), tel: soDigitos(f.tel),
+          entrega: reg ? "entrega" : "retirada", regiao: reg ? reg.nome : "", endereco: "", bairro: "", ref: "", data: f.data, periodo: f.periodo, pagamento: "pix", destinatario: "", cartao: "", obs: f.obs.trim(),
+          itens: [{ nome: f.desc.trim(), qtd: 1, preco: sub, tipo: "manual" }], subtotal: sub, frete: fr, desconto: 0, total: sub + fr });
+        salvar(); fechar(); toast("Pedido salvo"); renderAdmin();
+      };
+    });
+}
+
+function lerFoto(arquivo) {
+  return new Promise((ok, erro) => {
+    const r = new FileReader(); r.onerror = erro;
+    r.onload = () => { const im = new Image(); im.onerror = erro; im.onload = () => {
+      const max = 700, k = Math.min(1, max / Math.max(im.width, im.height)), cv = document.createElement("canvas");
+      cv.width = Math.round(im.width * k); cv.height = Math.round(im.height * k); cv.getContext("2d").drawImage(im, 0, 0, cv.width, cv.height);
+      ok(cv.toDataURL("image/jpeg", 0.78)); }; im.src = r.result; };
+    r.readAsDataURL(arquivo);
+  });
+}
+
+function admProdutos() {
+  const cat = id => DB.categorias.find(c => c.id === id);
+  $("#conteudoAdm").innerHTML = `<div class="cab" style="margin-bottom:10px"><h2 style="margin:0">Presentes prontos</h2><button class="bt bt-1 bt-p" id="novoProd">+ Novo presente</button></div>
+    <div class="painel rolagem" style="margin-top:0"><table class="tabela"><thead><tr><th></th><th>Presente</th><th>Categoria</th><th class="n">Preço</th><th>No site</th><th></th></tr></thead><tbody>
+    ${DB.produtos.map(p => `<tr data-id="${p.id}"><td>${p.img ? `<img src="${res(p.img)}" alt="">` : esc(cat(p.cat)?.emoji)}</td><td><b>${esc(p.nome)}</b>${p.destaque ? ' <span class="mini">★ destaque</span>' : ""}</td><td>${esc(cat(p.cat)?.nome || "—")}</td><td class="n">${brl(p.preco)}</td>
+      <td><label class="tog"><input type="checkbox" data-ativo ${p.ativo ? "checked" : ""}> ${p.ativo ? "Visível" : "Oculto"}</label></td><td class="n"><button class="bt bt-2 bt-p" data-edit>Editar</button></td></tr>`).join("")}
+    </tbody></table></div>
+    <div class="painel"><h3>Categorias</h3><p class="mini">${DB.categorias.map(c => esc(c.emoji + " " + c.nome)).join(" · ")}</p><div class="linha-acoes"><button class="bt bt-2 bt-p" id="novaCat">+ Nova categoria</button></div></div>`;
+  $("#novoProd").onclick = () => modalProduto(null);
+  $("#novaCat").onclick = () => { const n = prompt("Nome da nova categoria"); if (!n) return; const em = prompt("Um emoji para ela (opcional)", "🎁") || "🎁"; DB.categorias.push({ id: uid("c"), nome: n.trim(), emoji: em }); salvar(); renderAdmin(); };
+  $("#conteudoAdm").onclick = e => { const tr = e.target.closest("tr[data-id]"); if (tr && e.target.closest("[data-edit]")) modalProduto(DB.produtos.find(p => p.id === tr.dataset.id)); };
+  $("#conteudoAdm").onchange = e => { const tr = e.target.closest("tr[data-id]"); if (tr && e.target.matches("[data-ativo]")) { DB.produtos.find(p => p.id === tr.dataset.id).ativo = e.target.checked; salvar(); renderAdmin(); } };
+}
+
+function modalProduto(p) {
+  const novo = !p; p = p || { id: uid("p"), cat: DB.categorias[0].id, nome: "", desc: "", preco: 0, img: "", ativo: true, destaque: false };
+  let img = p.img;
+  abrirModal(`<h3>${novo ? "Novo presente" : "Editar presente"}</h3><form class="form-adm" id="fp">
+    <div style="display:flex;gap:12px;align-items:center"><img class="prev-img" id="prev" src="${res(img || "img/emblema.png")}" alt=""><div><label class="bt bt-2 bt-p">Trocar foto<input type="file" accept="image/*" id="foto" class="sr"></label><p class="mini" style="margin-top:6px">A foto é reduzida automaticamente.</p></div></div>
+    <label class="campo"><span class="mini"><b>Nome</b></span><input type="text" name="nome" required value="${esc(p.nome)}"></label>
+    <label class="campo"><span class="mini"><b>Descrição</b></span><textarea name="desc">${esc(p.desc)}</textarea></label>
+    <div class="dois"><label class="campo"><span class="mini"><b>Preço (R$)</b></span><input type="text" inputmode="decimal" name="preco" required value="${reais(p.preco)}"></label>
+    <label class="campo"><span class="mini"><b>Categoria</b></span><select name="cat">${DB.categorias.map(c => `<option value="${c.id}" ${p.cat === c.id ? "selected" : ""}>${esc(c.nome)}</option>`).join("")}</select></label></div>
+    <div class="linha-acoes"><label class="tog"><input type="checkbox" name="ativo" ${p.ativo ? "checked" : ""}> Mostrar no catálogo</label><label class="tog"><input type="checkbox" name="destaque" ${p.destaque ? "checked" : ""}> Destaque (“Mais pedido”)</label></div>
+    <div class="linha-acoes"><button class="bt bt-1">Salvar</button><button type="button" class="bt bt-2" data-fechar>Cancelar</button>${novo ? "" : `<button type="button" class="bt bt-2" id="excluir" style="color:var(--erro);border-color:var(--erro)">Excluir</button>`}</div></form>`,
+    (d, fechar) => {
+      $("#foto", d).onchange = async e => { const f = e.target.files[0]; if (!f) return; try { img = await lerFoto(f); $("#prev", d).src = img; } catch (er) { toast("Não consegui ler essa imagem"); } };
+      $("#fp", d).onsubmit = e => {
+        e.preventDefault(); const f = new FormData(e.target);
+        Object.assign(p, { nome: f.get("nome").trim(), desc: f.get("desc").trim(), preco: centavos(f.get("preco")), cat: f.get("cat"), ativo: !!f.get("ativo"), destaque: !!f.get("destaque"), img });
+        if (novo) DB.produtos.unshift(p);
+        if (salvar()) { fechar(); toast("Presente salvo"); renderAdmin(); }
+      };
+      const ex = $("#excluir", d); if (ex) ex.onclick = () => { if (confirm(`Excluir “${p.nome}”?`)) { DB.produtos = DB.produtos.filter(x => x !== p); salvar(); fechar(); renderAdmin(); } };
+    });
+}
+
+function admMonte() {
+  $("#conteudoAdm").innerHTML = `<h2>Monte sua cesta</h2><p class="mini" style="margin-bottom:10px">O cliente escolhe primeiro os itens; cada item <b>ocupa espaços</b>. Depois o site libera só as cestas cuja <b>capacidade</b> comporta a soma. Itens com espaço 0 (balões, cartão) vão por fora. Desmarque “No site” para esconder o que acabou.</p>
+    ${DB.monte.map(et => `<div class="painel" data-et="${et.id}"><div class="linha-acoes" style="margin:0 0 6px;align-items:center"><h3 style="margin:0;flex:1">${esc(et.emoji)} ${esc(et.titulo)}${et.unica ? ' <span class="mini">(cestas — o cliente escolhe 1)</span>' : ""}</h3><button class="bt bt-2 bt-p" data-novo>+ ${et.unica ? "Cesta" : "Item"}</button></div>
+      <div class="rolagem"><table class="tabela"><thead><tr><th></th><th>${et.unica ? "Cesta" : "Item"}</th><th class="n">${et.unica ? "Capacidade" : "Espaço"}</th><th class="n">Preço</th><th>No site</th><th></th></tr></thead><tbody>
+      ${et.itens.map(i => `<tr data-it="${i.id}"><td style="font-size:22px">${i.img ? `<img src="${res(i.img)}" alt="">` : esc(i.emoji)}</td><td><b>${esc(i.nome)}</b><br><span class="mini">${esc(i.desc)}</span></td><td class="n">${et.unica ? num(i.capacidade) : num(i.espaco)}</td><td class="n">${brl(i.preco)}</td>
+        <td><input type="checkbox" data-ativo ${i.ativo ? "checked" : ""} aria-label="Mostrar no site"></td><td class="n"><button class="bt bt-2 bt-p" data-edit>Editar</button></td></tr>`).join("")}
+      </tbody></table></div></div>`).join("")}`;
+  const etapaDe = el => DB.monte.find(e => e.id === el.closest("[data-et]").dataset.et);
+  $("#conteudoAdm").onclick = e => {
+    if (e.target.closest("[data-novo]")) return modalItemMonte(etapaDe(e.target), null);
+    if (e.target.closest("[data-edit]")) { const et = etapaDe(e.target); modalItemMonte(et, et.itens.find(i => i.id === e.target.closest("[data-it]").dataset.it)); }
+  };
+  $("#conteudoAdm").onchange = e => { if (!e.target.matches("[data-ativo]")) return; const et = etapaDe(e.target); et.itens.find(i => i.id === e.target.closest("[data-it]").dataset.it).ativo = e.target.checked; salvar(); };
+}
+
+function modalItemMonte(et, i) {
+  const novo = !i, cesta = !!et.unica;
+  i = i || { id: uid("m"), nome: "", desc: "", preco: 0, emoji: et.emoji, ativo: true, espaco: 1, capacidade: 10 };
+  let img = i.img || "";
+  abrirModal(`<h3>${novo ? (cesta ? "Nova cesta" : "Novo item") : (cesta ? "Editar cesta" : "Editar item")} — ${esc(et.titulo)}</h3><form class="form-adm" id="fi">
+    <div style="display:flex;gap:12px;align-items:center">${img ? `<img class="prev-img" id="prev" src="${res(img)}" alt="">` : `<img class="prev-img" id="prev" alt="" style="display:none">`}<div><label class="bt bt-2 bt-p">Foto (opcional)<input type="file" accept="image/*" id="foto" class="sr"></label><p class="mini" style="margin-top:6px">Sem foto, aparece o emoji.</p></div></div>
+    <label class="campo"><span class="mini"><b>Nome</b></span><input type="text" name="nome" required value="${esc(i.nome)}"></label>
+    <label class="campo"><span class="mini"><b>Detalhe</b></span><input type="text" name="desc" value="${esc(i.desc)}" placeholder="Ex.: 750 ml, unidade, cores variadas"></label>
+    <div class="dois"><label class="campo"><span class="mini"><b>Preço (R$)</b></span><input type="text" inputmode="decimal" name="preco" required value="${reais(i.preco)}"></label>
+    <label class="campo"><span class="mini"><b>${cesta ? "Capacidade (espaços)" : "Espaço que ocupa"}</b></span><input type="number" min="0" step="1" name="espaco" required value="${cesta ? num(i.capacidade) : num(i.espaco)}"></label></div>
+    <p class="mini">${cesta ? "Soma máxima de espaços que cabe nesta cesta." : "Quanto este item ocupa na cesta. Use 0 para o que vai por fora (balões, cartão)."}</p>
+    <label class="campo"><span class="mini"><b>Emoji</b></span><input type="text" name="emoji" value="${esc(i.emoji)}" maxlength="4"></label>
+    <label class="tog"><input type="checkbox" name="ativo" ${i.ativo ? "checked" : ""}> Mostrar no site</label>
+    <div class="linha-acoes"><button class="bt bt-1">Salvar</button><button type="button" class="bt bt-2" data-fechar>Cancelar</button>${novo ? "" : `<button type="button" class="bt bt-2" id="excluir" style="color:var(--erro);border-color:var(--erro)">Excluir</button>`}</div></form>`,
+    (d, fechar) => {
+      $("#foto", d).onchange = async e => { const f = e.target.files[0]; if (!f) return; try { img = await lerFoto(f); const pv = $("#prev", d); pv.src = img; pv.style.display = ""; } catch (er) { toast("Não consegui ler essa imagem"); } };
+      $("#fi", d).onsubmit = e => {
+        e.preventDefault(); const f = new FormData(e.target), v = Math.max(0, Math.round(num(f.get("espaco"))));
+        Object.assign(i, { nome: f.get("nome").trim(), desc: f.get("desc").trim(), preco: centavos(f.get("preco")), emoji: f.get("emoji").trim() || et.emoji, ativo: !!f.get("ativo"), img });
+        if (cesta) i.capacidade = v; else i.espaco = v;
+        if (novo) et.itens.push(i);
+        if (salvar()) { fechar(); toast("Salvo"); renderAdmin(); }
+      };
+      const ex = $("#excluir", d); if (ex) ex.onclick = () => { if (confirm(`Excluir “${i.nome}”?`)) { et.itens = et.itens.filter(x => x !== i); salvar(); fechar(); renderAdmin(); } };
+    });
+}
+
+function admFretes() {
+  $("#conteudoAdm").innerHTML = `<h2>Fretes por região</h2><p class="mini" style="margin-bottom:10px">O cliente escolhe a região na sacola e o frete entra no total. Os valores iniciais são de exemplo.</p>
+    <div class="painel" style="margin-top:0"><form id="ff"><div class="rolagem"><table class="tabela"><thead><tr><th>Região / cidade</th><th>Frete (R$)</th><th>Atende</th><th></th></tr></thead><tbody>
+    ${DB.fretes.map(r => `<tr data-r="${r.id}"><td><input type="text" data-k="nome" value="${esc(r.nome)}"></td><td style="width:120px"><input type="text" inputmode="decimal" data-k="valor" value="${reais(r.valor)}"></td>
+      <td><input type="checkbox" data-k="ativo" ${r.ativo ? "checked" : ""} aria-label="Atende"></td><td><button type="button" class="bt bt-2 bt-p" data-del aria-label="Remover">✕</button></td></tr>`).join("")}
+    </tbody></table></div>
+    <div class="linha-acoes"><button type="button" class="bt bt-2 bt-p" id="addR">+ Região</button><button class="bt bt-1">Salvar fretes</button></div></form></div>
+    <div class="painel"><h3>Retirada na loja</h3><label class="tog"><input type="checkbox" id="ret" ${DB.config.retirada ? "checked" : ""}> Oferecer retirada na loja (sem frete)</label></div>`;
+  const ler = () => [...document.querySelectorAll("#ff tr[data-r]")].forEach(tr => { const r = DB.fretes.find(x => x.id === tr.dataset.r); if (!r) return; r.nome = $("[data-k=nome]", tr).value.trim() || r.nome; r.valor = centavos($("[data-k=valor]", tr).value); r.ativo = $("[data-k=ativo]", tr).checked; });
+  $("#addR").onclick = () => { ler(); DB.fretes.push({ id: uid("r"), nome: "Nova região", valor: 0, ativo: true }); admFretes(); };
+  $("#ff").onclick = e => { const b = e.target.closest("[data-del]"); if (b) { ler(); DB.fretes = DB.fretes.filter(r => r.id !== b.closest("tr").dataset.r); admFretes(); } };
+  $("#ff").onsubmit = e => { e.preventDefault(); ler(); salvar(); toast("Fretes salvos"); };
+  $("#ret").onchange = e => { DB.config.retirada = e.target.checked; salvar(); toast("Salvo"); };
+}
+
+function admFinanceiro() {
+  const lanc = DB.financeiro.filter(f => f.data.slice(0, 7) === mesFin).sort((a, b) => b.data.localeCompare(a.data));
+  const ent = lanc.filter(f => f.tipo === "entrada").reduce((s, f) => s + f.valor, 0), sai = lanc.filter(f => f.tipo === "saida").reduce((s, f) => s + f.valor, 0);
+  $("#conteudoAdm").innerHTML = `<h2>Entradas e saídas</h2>
+    <div class="linha-acoes" style="margin:0 0 12px;align-items:center"><label class="campo" style="margin:0"><span class="mini"><b>Mês</b></span><input type="month" id="mes" value="${mesFin}" style="padding:10px;border-radius:12px;border:1.5px solid var(--linha)"></label></div>
+    <div class="kpis"><div class="kpi"><span>Entradas</span><b>${brl(ent)}</b></div><div class="kpi"><span>Saídas</span><b>${brl(sai)}</b></div><div class="kpi"><span>Saldo</span><b>${brl(ent - sai)}</b></div><div class="kpi"><span>Lançamentos</span><b>${lanc.length}</b></div></div>
+    <div class="painel"><h3>Novo lançamento</h3><form class="form-adm col2" id="fl">
+      <label class="campo"><span class="mini"><b>Tipo</b></span><select name="tipo"><option value="entrada">Entrada</option><option value="saida">Saída (compra, material…)</option></select></label>
+      <label class="campo"><span class="mini"><b>Data</b></span><input type="date" name="data" value="${hojeISO()}" required></label>
+      <label class="campo"><span class="mini"><b>Descrição</b></span><input type="text" name="desc" required placeholder="Ex.: Compra de flores"></label>
+      <label class="campo"><span class="mini"><b>Valor (R$)</b></span><input type="text" inputmode="decimal" name="valor" required></label>
+      <div class="linha-acoes" style="grid-column:1/-1;margin:0"><button class="bt bt-1">Lançar</button></div></form></div>
+    <div class="painel">${lanc.length ? `<div class="rolagem"><table class="tabela"><thead><tr><th>Data</th><th>Descrição</th><th class="n">Valor</th><th></th></tr></thead><tbody>
+      ${lanc.map(f => `<tr data-f="${f.id}"><td>${dataBR(f.data)}</td><td>${esc(f.desc)}</td><td class="n" style="color:${f.tipo === "entrada" ? "var(--ok)" : "var(--erro)"}">${f.tipo === "entrada" ? "+" : "−"} ${brl(f.valor)}</td><td class="n"><button class="bt bt-2 bt-p" data-del aria-label="Excluir">✕</button></td></tr>`).join("")}
+      </tbody></table></div>` : `<p class="mini">Nenhum lançamento neste mês. Ao registrar o pagamento de um pedido, ele entra aqui sozinho.</p>`}</div>`;
+  $("#mes").onchange = e => { mesFin = e.target.value || hojeISO().slice(0, 7); admFinanceiro(); };
+  $("#fl").onsubmit = e => { e.preventDefault(); const f = Object.fromEntries(new FormData(e.target)); DB.financeiro.unshift({ id: uid("f"), data: f.data, tipo: f.tipo, desc: f.desc.trim(), valor: centavos(f.valor) }); salvar(); mesFin = f.data.slice(0, 7); toast("Lançado"); admFinanceiro(); };
+  $("#conteudoAdm").onclick = e => { const b = e.target.closest("[data-del]"); if (!b || !confirm("Excluir este lançamento?")) return; DB.financeiro = DB.financeiro.filter(f => f.id !== b.closest("tr").dataset.f); salvar(); admFinanceiro(); };
+}
+
+function admConfig() {
+  const c = DB.config;
+  $("#conteudoAdm").innerHTML = `<h2>Configurações</h2>
+    <div class="painel" style="margin-top:0"><h3>Loja</h3><form class="form-adm col2" id="fc">
+      <label class="campo"><span class="mini"><b>WhatsApp que recebe os pedidos</b></span><input type="tel" name="whatsapp" value="${esc(fone(c.whatsapp))}" required></label>
+      <label class="campo"><span class="mini"><b>Instagram (sem @)</b></span><input type="text" name="instagram" value="${esc(c.instagram)}"></label>
+      <label class="campo"><span class="mini"><b>Cidade</b></span><input type="text" name="cidade" value="${esc(c.cidade)}"></label>
+      <label class="campo"><span class="mini"><b>Endereço para retirada</b></span><input type="text" name="endereco" value="${esc(c.endereco)}" placeholder="Rua, número — bairro"></label>
+      <label class="campo"><span class="mini"><b>Horário de atendimento</b></span><input type="text" name="horario" value="${esc(c.horario)}"></label>
+      <label class="campo"><span class="mini"><b>Aviso de antecedência</b></span><input type="text" name="antecedencia" value="${esc(c.antecedencia)}"></label>
+      <label class="campo" style="grid-column:1/-1"><span class="mini"><b>Frase de apresentação</b></span><input type="text" name="frase" value="${esc(c.frase)}"></label>
+      <label class="tog" style="grid-column:1/-1"><input type="checkbox" name="cartaoGratis" ${c.cartaoGratis ? "checked" : ""}> Cartão com mensagem é cortesia</label>
+      <div class="linha-acoes" style="grid-column:1/-1;margin:0"><button class="bt bt-1">Salvar</button></div></form></div>
+    <div class="painel"><h3>Senha do painel</h3><form class="form-adm col2" id="fs">
+      <label class="campo"><span class="mini"><b>Nova senha</b></span><input type="password" name="s1" minlength="4" required autocomplete="new-password"></label>
+      <label class="campo"><span class="mini"><b>Repita a senha</b></span><input type="password" name="s2" minlength="4" required autocomplete="new-password"></label>
+      <div class="linha-acoes" style="grid-column:1/-1;margin:0"><button class="bt bt-1">Trocar senha</button></div></form></div>
+    <div class="painel"><h3>Cópia de segurança</h3><p class="mini">Nesta demonstração os dados ficam só neste navegador. Baixe uma cópia de vez em quando, ou para levar os dados para outro aparelho.</p>
+      <div class="linha-acoes"><button class="bt bt-2 bt-p" id="exp">Baixar cópia (.json)</button><label class="bt bt-2 bt-p">Restaurar cópia<input type="file" accept="application/json,.json" id="imp" class="sr"></label>
+      <button class="bt bt-2 bt-p" id="reset" style="color:var(--erro);border-color:var(--erro)">Voltar aos dados iniciais</button></div></div>`;
+  $("#fc").onsubmit = e => { e.preventDefault(); const f = new FormData(e.target);
+    Object.assign(c, { whatsapp: soDigitos(f.get("whatsapp")), instagram: f.get("instagram").replace("@", "").trim(), cidade: f.get("cidade").trim(), endereco: f.get("endereco").trim(), horario: f.get("horario").trim(), antecedencia: f.get("antecedencia").trim(), frase: f.get("frase").trim(), cartaoGratis: !!f.get("cartaoGratis") });
+    salvar(); toast("Configurações salvas"); };
+  $("#fs").onsubmit = e => { e.preventDefault(); const f = new FormData(e.target); if (f.get("s1") !== f.get("s2")) return toast("As senhas não conferem"); c.senha = f.get("s1"); salvar(); e.target.reset(); toast("Senha trocada"); };
+  $("#exp").onclick = () => { const b = new Blob([JSON.stringify(DB, null, 1)], { type: "application/json" }); const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = `lacos-e-flores-${hojeISO()}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); };
+  $("#imp").onchange = e => { const f = e.target.files[0]; if (!f) return; const r = new FileReader(); r.onload = () => { try { const d = JSON.parse(r.result); if (!d.produtos || !d.config) throw 0; d.versao = VERSAO_DADOS; DB = d; salvar(); toast("Cópia restaurada"); renderAdmin(); } catch (er) { toast("Arquivo inválido"); } }; r.readAsText(f); };
+  $("#reset").onclick = () => { if (!confirm("Apagar pedidos, lançamentos e alterações e voltar aos dados iniciais?")) return; DB = JSON.parse(JSON.stringify(DADOS_INICIAIS)); salvar(); toast("Dados iniciais restaurados"); renderAdmin(); };
+}
+
+/* ---------- rotas ---------- */
+let telaAtual = "";
+function rota() {
+  const adm = location.hash === "#admin";
+  if (adm) { telaAtual = "admin"; renderAdmin(); window.scrollTo(0, 0); return; }
+  if (telaAtual !== "catalogo") { telaAtual = "catalogo"; renderCatalogo(); const alvo = location.hash && document.getElementById(location.hash.slice(1)); if (alvo) setTimeout(() => alvo.scrollIntoView(), 30); }
+}
+window.addEventListener("hashchange", rota);
+window.addEventListener("storage", e => { if (e.key === CHAVE_DB) { DB = lerJSON(CHAVE_DB, DB); } });
+rota();
+</script>
+</body>
+</html>
